@@ -1,6 +1,7 @@
 <?php
 
     include("functions.php");
+    $page = isset($_GET['p']) ? $_GET['p'] : '';
 
     include("client_view/header.php");
 
@@ -15,6 +16,8 @@
         include("client_view/category_list.php");
     } else if($page == "home"){
         include("client_view/home.php");
+    } else if($page == "relation"){
+        include("client_view/category_list.php");
     } else {
         include("client_view/home.php");
     }

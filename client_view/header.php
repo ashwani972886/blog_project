@@ -175,7 +175,7 @@
                                 </li>
 
                                 <li><a href="#">fiction</a></li>
-                                <li><a href="#">relationship</a></li>
+                                <li><a href="?p=relation">relationship</a></li>
                                 <li class="dropdown"><a href="#">fashion</a>
 
                                     <ul class="dropdown__menu">
