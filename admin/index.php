@@ -4,7 +4,7 @@
 
     
 
-    if(!$session_admin){
+    if($session_admin){
 
         include("header.php");
 
