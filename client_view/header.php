@@ -175,7 +175,7 @@
                                 </li>
 
                                 <li><a href="#">fiction</a></li>
-                                <li><a href="#">relationship</a></li>
+                                <li><a href="?p=relation">relationship</a></li>
                                 <li class="dropdown"><a href="#">fashion</a>
 
                                     <ul class="dropdown__menu">
@@ -217,7 +217,7 @@
                 </div>
                 <div class="col-lg-3 col-md-3">
                     <div class="header__btn">
-                        <a href="./signin.html" class="primary-btn">Post Your own Blog  </a>
+                        <a href="http://localhost/blog_project/admin/" class="primary-btn">Post Your own Blog  </a>
                     </div>
                 </div>                   
 

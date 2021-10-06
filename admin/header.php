@@ -12,7 +12,14 @@
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
     <meta name="msapplication-tap-highlight" content="no">
     
-    <link href="./main.css" rel="stylesheet"></head>
+    <link href="./main.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/tagsinput.css">
+
+
+</head>
+
+
+
     <!--Title Logo-->
     <link rel="shortcut icon" type="image/png" href="http://localhost/blog_project/images/logo_cc.png"/>
 
@@ -23,7 +30,7 @@
 
     <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
         <!-- Top Header -->
-        <div class="app-header header-shadow bg-danger header-text-light ">
+        <div class="app-header header-shadow">
             <div class="app-header__logo">
                 <div class="logo-src"></div>
                 <!-- <div class=""><h4 style="font-weight: bold; color: #60CCFF;">College-Connect</h4></div> -->
@@ -65,7 +72,7 @@
         </div>
         <!-- Side Bar -->
         <div class="app-main">
-            <div class="app-sidebar sidebar-shadow bg-asteroid sidebar-text-light">
+            <div class="app-sidebar sidebar-shadow">
                 <div class="app-header__logo">
                     <div class="logo-src"></div>
                     <div class="header__pane ml-auto">
