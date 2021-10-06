@@ -217,7 +217,7 @@
                 </div>
                 <div class="col-lg-3 col-md-3">
                     <div class="header__btn">
-                        <a href="./signin.html" class="primary-btn">Post Your own Blog  </a>
+                        <a href="http://localhost/blog_project/admin/" class="primary-btn">Post Your own Blog  </a>
                     </div>
                 </div>                   
 

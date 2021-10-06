@@ -4,7 +4,7 @@
 
     $page = isset($_GET['p']) ? $_GET['p'] : '';
     $function = isset($_GET['function']) ? $_GET['function'] : '';
-    $session_admin = isset($_SESSION['admin']) ? $_SESSION['admin'] : '';
+    $session_id = isset($_SESSION['id']) ? $_SESSION['id'] : '';
 
 
     $link = mysqli_connect("localhost", "root", "", "blog_db");

@@ -4,7 +4,7 @@
 
     
 
-    if($session_admin){
+    if($session_id){
 
         include("header.php");
 
@@ -15,6 +15,10 @@
         } else if($page == "new_post"){
             
             include("new_post.php");
+
+        } else if($page == "post_li"){
+            
+            include("post_list.php");
 
         } else {
             include("dashboard.php");
