@@ -57,6 +57,12 @@
             }
     
     }
+
+    if($_GET['action'] == "saveAsDraft"){
+    
+        
+        echo $_POST['blogContent'];
+    }
     
 
 ?>
