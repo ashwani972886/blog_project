@@ -12,7 +12,17 @@
         include("client_view/about.php");
     } else if($page == "contact"){
         include("client_view/contact.php");
-    } else if($page == "cat_li"){
+    } 
+    // added by me 
+    else if($page == "123"){
+        include("client_view/category_list.php");
+    }
+    // till here
+    else if($page == "subCat"){
+        include("client_view\insideView.php");
+    }
+    // till here
+    else if($page == "cat_li"){
         include("client_view/category_list.php");
     } else if($page == "home"){
         include("client_view/home.php");
