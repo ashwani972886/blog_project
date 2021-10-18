@@ -15,7 +15,7 @@
         <!-- Generator -->
         <div class="page-title-actions">
             <div class="position-relative form-group">
-                <button class="btn btn-info" name="preview" type="submit" value="preview" style="font-size: 24px; width: 150px;">Preview</button>
+                <button class="btn btn-info" name="preview" type="submit" target="_blank" value="preview" style="font-size: 24px; width: 150px;">Preview</button>
             </div>
         </div>
 
@@ -208,15 +208,17 @@ function draftpost($session_id, $isPreview){
 
     $date = date("Y-m-d H:i:s");
 
-    // echo $_POST['tagsInput'];
 
     $tags = explode(",",$_POST['tagsInput']);
 
     
+    $query = "SELECT * FROM blogger_users WHERE `id` = '".$session_id."' ";
+
+    $result = mysqli_query($link, $query);
+    $user = mysqli_fetch_assoc($result);
 
 
-
-    // echo $isPreview;
+    
 
     
 
@@ -235,7 +237,7 @@ function draftpost($session_id, $isPreview){
 
             $query = "INSERT INTO `post_draft` (`user_id`, `title_img`, `title`, `category`, `sub_category`, `description`,
                                                     `quote_desc`, `quote_author`, `quote_s`, `profile_s`, `comment_s`, `date_time`)
-                        VALUES ('".mysqli_real_escape_string($link, $session_id)."',
+                        VALUES ('".mysqli_real_escape_string($link, $user['user_id'])."',
                                 '". mysqli_real_escape_string($link, $filename)."',
                                 '". mysqli_real_escape_string($link, $_POST['title'])."',
                                 '". mysqli_real_escape_string($link, $_POST['getCategory'])."',
