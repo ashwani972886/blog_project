@@ -20,5 +20,93 @@
 
     </div>
 </div>
-
 <!-- Header End -->
+<div>
+    <div class="card mb-3">
+     <img src="..." class="card-img-top" alt="...">
+     <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <div style="float:right">
+      <button type="button" class="btn btn-warning">download</button>
+      <button type="button" class="btn btn-info">share</button>
+      <button type="button" class="btn btn-light">delete</button>
+      <button type="button" class="btn btn-dark">save</button>
+      </div>
+     </div>
+    </div>
+    <div class="card mb-3">
+      <div class="card-body">
+       <h5 class="card-title">Card title</h5>
+       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+       <div style="float: right">
+       <button type="button" class="btn btn-warning">download</button>
+      <button type="button" class="btn btn-info">share</button>
+      <button type="button" class="btn btn-light">delete</button>
+      <button type="button" class="btn btn-dark">save</button>
+      </div>
+      </div> 
+    </div>
+</div>
+
+<div>
+    <div class="card mb-3">
+     <img src="..." class="card-img-top" alt="...">
+     <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <div style="float:right">
+      <button type="button" class="btn btn-warning">download</button>
+      <button type="button" class="btn btn-info">share</button>
+      <button type="button" class="btn btn-light">delete</button>
+      <button type="button" class="btn btn-dark">save</button>
+      </div>
+     </div>
+    </div>
+    <div class="card mb-3">
+      <div class="card-body">
+       <h5 class="card-title">Card title</h5>
+       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        <div style="float:right">
+       <button type="button" class="btn btn-warning">download</button>
+      <button type="button" class="btn btn-info">share</button>
+      <button type="button" class="btn btn-light">delete</button>
+      <button type="button" class="btn btn-dark">save</button>
+      </div>
+      </div>
+    </div>
+</div>
+<div>
+    <div class="card mb-3">
+     <img src="..." class="card-img-top" alt="...">
+     <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      <div style="float:right">
+      <button type="button" class="btn btn-warning">download</button>
+      <button type="button" class="btn btn-info">share</button>
+      <button type="button" class="btn btn-light">delete</button>
+      <button type="button" class="btn btn-dark">save</button>
+      </div>
+     </div>
+    </div>
+    <div class="card mb-3">
+      <div class="card-body">
+       <h5 class="card-title">Card title</h5>
+       <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+       <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+       <div style="float:right">
+       <button type="button" class="btn btn-warning">download</button>
+      <button type="button" class="btn btn-info">share</button>
+      <button type="button" class="btn btn-light">delete</button>
+      <button type="button" class="btn btn-dark">save</button>
+      </div>
+      </div>
+       <img src="..." class="card-img-bottom" alt="...">
+    </div>
+</div>
