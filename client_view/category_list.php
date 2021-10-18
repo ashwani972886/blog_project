@@ -1,380 +1,276 @@
+<div  style=" background-color: #F4952F;" class="bound-mng" >
 
+
+    <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+            <symbol id="icon-cross" viewBox="0 0 32 32">
+                <title>close</title>
+                <path d="M31.7 25.7L22 16l9.7-9.7a1 1 0 0 0 0-1.4L27.1.3a1 1 0 0 0-1.4 0L16 10 6.3.3a1 1 0 0 0-1.4 0L.3 4.9a1 1 0 0 0 0 1.4L10 16 .3 25.7a1 1 0 0 0 0 1.4l4.6 4.6a1 1 0 0 0 1.4 0L16 22l9.7 9.7a1 1 0 0 0 1.4 0l4.6-4.6a1 1 0 0 0 0-1.4z" />
+            </symbol>
+        </defs>
+    </svg>
+
+    <div  class="page" data-modal-state="closed">
+        <!-- below this line  -->
+        <div class="container bound-mng">
+            <div  class="card-slider">
+
+
+
+                <!--sec 1-->
+                <div class="card-wrapper text-right">
+                    <article style="border-radius: 30px !important; border: 5px solid black;"  class="card" id="card1">
+                        <picture class="card__background">
+                            <img  src="https://h.top4top.io/p_2090op8p41.jpeg">
+                        </picture>
+                        <h3 class="card__title">THE EVIL WITHIN</h3>
+                        <div class="card__duration text-right">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                        </div>
+                    </article>
+                </div>
+
+                <!--sec 2-->
+                <div class="card-wrapper">
+                    <article style="border-radius: 30px !important; border: 5px solid black;"  class="card" id="card2">
+                        <picture class="card__background">
+                            <img src="https://i.top4top.io/p_2090wxca12.jpeg">
+                        </picture>
+                        <h3 class="card__title text-right">RESIDENT EVIL</h3>
+                        <div class="card__duration">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry</div>
+                    </article>
+                </div>
+
+                <!--sec 3-->
+                <div class="card-wrapper">
+                    <article style="border-radius: 30px !important; border: 5px solid black;"  class="card" id="card3">
+                        <picture class="card__background">
+                            <img src="https://j.top4top.io/p_20904bx7k3.jpeg">
+                        </picture>
+                        <h3 class="card__title">SILENT HILL</h3>
+                        <div class="card__duration">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry</div>
+                    </article>
+                </div>
+
+                <!--sec 4-->
+                <div class="card-wrapper">
+                    <article  style="border-radius: 30px !important; border: 5px solid black;" class="card" id="card4">
+                        <picture class="card__background">
+                            <img src="https://mrkzgulfup.com/uploads/16323540476191.jpeg">
+                        </picture>
+                        <h3 class="card__title">FATAL FRAME</h3>
+                        <div class="card__duration">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry </div>
+                    </article>
+                </div>
+
+                <!--sec 5-->
+                <div class="card-wrapper">
+                    <article  style="border-radius: 30px !important; border: 5px solid black;" class="card" id="card5">
+                        <picture class="card__background">
+                            <img src="https://l.top4top.io/p_20905ncw25.png">
+                        </picture>
+                        <h3 class="card__title">HAUNTING GROUND</h3>
+                        <div class="card__duration">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry</div>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay"></div>
+        <div class="modal-wrapper">
+            <div class="modal">
+                <button class="modal__close-button" type="button">
+                    <!-- <h1>aqib</h1> -->
+                    <svg class="icon icon-cross">
+                        <h1>ajsdljasdlfjklasdf</h1>
+                        <use xlink:href="#icon-cross"></use>
+                    </svg>
+                </button>
+                <div class="modal__scroll-area">
+                    <header class="modal__header">
+                        <div class="card__background">
+                            <img id="modalImge" src="">
+                        </div>
+                        <h1 class="card__title" id="modalTitel"></h1>
+                    </header>
+                    <main class="modal__content">
+                        <p id="p1"></p>
+                        <p id="p2"></p>
+                        <br>
+                        <br>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- partial -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.1/web-animations.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.3.1/smooth-scrollbar.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js'></script>
+    <script src="js/script.js"></script>
+
+</div>
 
 <!-- Categories Section Begin -->
 <section class="categories categories-grid spad">
-        <div class="categories__post">
-            <div class="container">
-                <div class="categories__grid__post">
-                    <div class="row">
-                        <div class="col-lg-8 col-md-8">
-                            <div class="breadcrumb__text">
-                                <h2>Categories: <span>Recipes</span></h2>
+    <div class="categories__post">
+        <div class="container">
+            <div class="categories__grid__post">
+                <div class="row">
+                    <div class="row-lg-8 row-md-8">
+                        <!-- <div class="breadcrumb__text">
+                                <h2>Categories: <span>TECHNOLOGY</span></h2>
                                 <div class="breadcrumb__option">
                                     <a href="#">Home</a>
-                                    <span>Recipes</span>
+                                    <span>Technology</span>
                                 </div>
-                            </div>
-                            <div class="categories__list__post__item">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="categories__post__item__pic set-bg"
-                                            data-setbg="img/categories/categories-list/cl-1.jpg">
-                                            <div class="post__meta">
-                                                <h4>08</h4>
-                                                <span>Aug</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="categories__post__item__text">
-                                            <span class="post__label">Recipe</span>
-                                            <h3><a href="#">The Best Weeknight Baked Potatoes, 3 Creative Ways</a></h3>
-                                            <ul class="post__widget">
-                                                <li>by <span>Admin</span></li>
-                                                <li>3 min read</li>
-                                                <li>20 Comment</li>
-                                            </ul>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                tempor incididunt dolore magna aliqua. Quis ipsum suspendisse ultrices
-                                                gravida...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="categories__list__post__item">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="categories__post__item__pic set-bg"
-                                            data-setbg="img/categories/categories-list/cl-2.jpg">
-                                            <div class="post__meta">
-                                                <h4>08</h4>
-                                                <span>Aug</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="categories__post__item__text">
-                                            <ul class="post__label--large">
-                                                <li>Vegan</li>
-                                                <li>Desserts</li>
-                                            </ul>
-                                            <h3><a href="#">The Best Grass Stain Remover Is Already In Your Pantry</a>
-                                            </h3>
-                                            <ul class="post__widget">
-                                                <li>by <span>Admin</span></li>
-                                                <li>3 min read</li>
-                                                <li>20 Comment</li>
-                                            </ul>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                tempor incididunt dolore magna aliqua. Quis ipsum suspendisse ultrices
-                                                gravida...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="categories__list__post__item">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="categories__post__item__pic set-bg"
-                                            data-setbg="img/categories/categories-list/cl-3.jpg">
-                                            <div class="post__meta">
-                                                <h4>08</h4>
-                                                <span>Aug</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="categories__post__item__text">
-                                            <span class="post__label">Drinks</span>
-                                            <h3><a href="#">A 5-Minute Peach Mug Cobbler That Just So Happens to...</a>
-                                            </h3>
-                                            <ul class="post__widget">
-                                                <li>by <span>Admin</span></li>
-                                                <li>3 min read</li>
-                                                <li>20 Comment</li>
-                                            </ul>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                tempor incididunt dolore magna aliqua. Quis ipsum suspendisse ultrices
-                                                gravida...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="categories__list__post__item">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="categories__post__item__pic set-bg"
-                                            data-setbg="img/categories/categories-list/cl-4.jpg">
-                                            <div class="post__meta">
-                                                <h4>08</h4>
-                                                <span>Aug</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="categories__post__item__text">
-                                            <span class="post__label">Smoothie</span>
-                                            <h3><a href="#">This 2-Ingredient Spread Makes Any Egg Sandwich So Much
-                                                    Better</a></h3>
-                                            <ul class="post__widget">
-                                                <li>by <span>Admin</span></li>
-                                                <li>3 min read</li>
-                                                <li>20 Comment</li>
-                                            </ul>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                tempor incididunt dolore magna aliqua. Quis ipsum suspendisse ultrices
-                                                gravida...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="categories__list__post__item">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="categories__post__item__pic set-bg"
-                                            data-setbg="img/categories/categories-list/cl-5.jpg">
-                                            <div class="post__meta">
-                                                <h4>08</h4>
-                                                <span>Aug</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="categories__post__item__text">
-                                            <span class="post__label">Dinner</span>
-                                            <h3><a href="#">17 Perfect Gifts for Your Vegan Friend Because
-                                                    Sometimes...</a></h3>
-                                            <ul class="post__widget">
-                                                <li>by <span>Admin</span></li>
-                                                <li>3 min read</li>
-                                                <li>20 Comment</li>
-                                            </ul>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                tempor incididunt dolore magna aliqua. Quis ipsum suspendisse ultrices
-                                                gravida...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="categories__list__post__item">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="categories__post__item__pic set-bg"
-                                            data-setbg="img/categories/categories-list/cl-6.jpg">
-                                            <div class="post__meta">
-                                                <h4>08</h4>
-                                                <span>Aug</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="categories__post__item__text">
-                                            <span class="post__label">Dinner</span>
-                                            <h3><a href="#">A 5-Minute Peach Mug Cobbler That Just So Happens to...</a>
-                                            </h3>
-                                            <ul class="post__widget">
-                                                <li>by <span>Admin</span></li>
-                                                <li>3 min read</li>
-                                                <li>20 Comment</li>
-                                            </ul>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                tempor incididunt dolore magna aliqua. Quis ipsum suspendisse ultrices
-                                                gravida...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="categories__list__post__item">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="categories__post__item__pic set-bg"
-                                            data-setbg="img/categories/categories-list/cl-7.jpg">
-                                            <div class="post__meta">
-                                                <h4>08</h4>
-                                                <span>Aug</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="categories__post__item__text">
-                                            <ul class="post__label--large">
-                                                <li>Vegan</li>
-                                                <li>Desserts</li>
-                                            </ul>
-                                            <h3><a href="#">Fresh Herb Polenta with Parsnip Chips and Maple Butter</a>
-                                            </h3>
-                                            <ul class="post__widget">
-                                                <li>by <span>Admin</span></li>
-                                                <li>3 min read</li>
-                                                <li>20 Comment</li>
-                                            </ul>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                tempor incididunt dolore magna aliqua. Quis ipsum suspendisse ultrices
-                                                gravida...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="categories__list__post__item">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="categories__post__item__pic set-bg"
-                                            data-setbg="img/categories/categories-list/cl-7.jpg">
-                                            <div class="post__meta">
-                                                <h4>08</h4>
-                                                <span>Aug</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6">
-                                        <div class="categories__post__item__text">
-                                            <ul class="post__label--large">
-                                                <li>Vegan</li>
-                                                <li>Desserts</li>
-                                            </ul>
-                                            <h3><a href="#">Fresh Herb Polenta with Parsnip Chips and Maple Butter</a>
-                                            </h3>
-                                            <ul class="post__widget">
-                                                <li>by <span>Admin</span></li>
-                                                <li>3 min read</li>
-                                                <li>20 Comment</li>
-                                            </ul>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                                tempor incididunt dolore magna aliqua. Quis ipsum suspendisse ultrices
-                                                gravida...</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            </div> -->
+
+
+                    <div>
+                        <div class="categories__list__post__item">
                             <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="categories__pagination">
-                                        <a href="#">1</a>
-                                        <a href="#">2</a>
-                                        <a href="#">3</a>
-                                        <a href="#">Next</a>
+                                <a href="?p=subCat">
+                                    <div class="col-lg-4 col-md-4 hov-img">
+                                        <div style="border-radius: 15px !important; margin: 5px; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
+                                        </div>
+                                        <div class="categories__post__item__text text-center">
+                                            <span style="font-size: 30px ; " class="post__label">LAPTOPS</span>
+                                            <h3><a style="padding: 0px !important; margin: 10px 0px 10px 0px;" href="#">This is all about laptops , 3 Creative Ways</a></h3>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
+
+                                <a href="?p=subCat">
+                                    <div class="col-lg-4 col-md-4 hov-img">
+                                        <div style="border-radius: 15px !important; margin: 5px; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
+                                        </div>
+                                        <div class="categories__post__item__text text-center">
+                                            <span style="font-size: 30px ; " class="post__label">LAPTOPS</span>
+                                            <h3><a style="padding: 0px !important; margin: 10px 0px 10px 0px;" href="#">This is all about laptops , 3 Creative Ways</a></h3>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="?p=subCat">
+                                    <div class="col-lg-4 col-md-4 hov-img">
+                                        <div style="border-radius: 15px !important; margin: 5px; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
+                                        </div>
+                                        <div class="categories__post__item__text text-center">
+                                            <span style="font-size: 30px ; " class="post__label">LAPTOPS</span>
+                                            <h3><a style="padding: 0px !important; margin: 10px 0px 10px 0px;" href="#">This is all about laptops , 3 Creative Ways</a></h3>
+                                        </div>
+                                    </div>
+                                </a>
+
                             </div>
+
                         </div>
-                        <div class="col-lg-4 col-md-4">
-                            <div class="sidebar__item">
-                                <div class="sidebar__about__item">
-                                    <div class="sidebar__item__title">
-                                        <h6>About me</h6>
-                                    </div>
-                                    <img src="img/sidebar/sidebar-about.jpg" alt="">
-                                    <h6>Hi every one! I,m <span>Lena Mollein.</span></h6>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua.</p>
-                                    <a href="#" class="primary-btn">Read more</a>
-                                </div>
-                                <div class="sidebar__follow__item">
-                                    <div class="sidebar__item__title">
-                                        <h6>Follow me</h6>
-                                    </div>
-                                    <div class="sidebar__item__follow__links">
-                                        <a href="#"><i class="fa fa-facebook"></i></a>
-                                        <a href="#"><i class="fa fa-twitter"></i></a>
-                                        <a href="#"><i class="fa fa-youtube-play"></i></a>
-                                        <a href="#"><i class="fa fa-instagram"></i></a>
-                                        <a href="#"><i class="fa fa-envelope-o"></i></a>
-                                    </div>
-                                </div>
-                                <div class="sidebar__feature__item">
-                                    <div class="sidebar__item__title">
-                                        <h6>Feature Posts</h6>
-                                    </div>
-                                    <div class="sidebar__feature__item__large set-bg"
-                                        data-setbg="img/sidebar/feature-post.jpg">
-                                        <div class="sidebar__feature__item__large--text">
-                                            <span>Dinner</span>
-                                            <h5><a href="#">This Japanese Way of Making Iced Coffee Is a Game...</a>
-                                            </h5>
+                        <!-- ////////// -->
+
+                        <div class="categories__list__post__item">
+                            <div class="row">
+                                <a href="?p=subCat">
+                                    <div class="col-lg-4 col-md-4 hov-img">
+                                        <div style="border-radius: 15px !important; margin: 5px; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
+                                        </div>
+                                        <div class="categories__post__item__text text-center">
+                                            <span style="font-size: 30px ; " class="post__label">LAPTOPS</span>
+                                            <h3><a style="padding: 0px !important; margin: 10px 0px 10px 0px;" href="#">This is all about laptops , 3 Creative Ways</a></h3>
                                         </div>
                                     </div>
-                                    <div class="sidebar__feature__item__list">
-                                        <div class="sidebar__feature__item__list__single">
-                                            <div class="post__meta">
-                                                <h4>08</h4>
-                                                <span>Aug</span>
-                                            </div>
-                                            <div class="post__text">
-                                                <span>Dinner</span>
-                                                <h5><a href="#">Grilled Potato and Green Bean Salad</a></h5>
-                                            </div>
+                                </a>
+
+                                <a href="?p=subCat">
+                                    <div class="col-lg-4 col-md-4 hov-img">
+                                        <div style="border-radius: 15px !important; margin: 5px; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
                                         </div>
-                                        <div class="sidebar__feature__item__list__single">
-                                            <div class="post__meta">
-                                                <h4>05</h4>
-                                                <span>Aug</span>
-                                            </div>
-                                            <div class="post__text">
-                                                <span>Smoothie</span>
-                                                <h5><a href="#">The $8 French Rosé I Buy in Bulk Every Summer</a></h5>
-                                            </div>
-                                        </div>
-                                        <div class="sidebar__feature__item__list__single">
-                                            <div class="post__meta">
-                                                <h4>26</h4>
-                                                <span>jul</span>
-                                            </div>
-                                            <div class="post__text">
-                                                <span>Desert</span>
-                                                <h5><a href="#">Ina Garten's Skillet-Roasted Lemon Chicken</a></h5>
-                                            </div>
-                                        </div>
-                                        <div class="sidebar__feature__item__list__single">
-                                            <div class="post__meta">
-                                                <h4>16</h4>
-                                                <span>jul</span>
-                                            </div>
-                                            <div class="post__text">
-                                                <span>Vegan</span>
-                                                <h5><a href="#">The Best Weeknight Baked Potatoes, 3 Creative Ways</a>
-                                                </h5>
-                                            </div>
+                                        <div class="categories__post__item__text text-center">
+                                            <span style="font-size: 30px ; " class="post__label">LAPTOPS</span>
+                                            <h3><a style="padding: 0px !important; margin: 10px 0px 10px 0px;" href="#">This is all about laptops , 3 Creative Ways</a></h3>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="sidebar__item__banner">
-                                    <img src="img/sidebar/banner.jpg" alt="">
-                                </div>
-                                <div class="sidebar__item__categories">
-                                    <div class="sidebar__item__title">
-                                        <h6>Categories</h6>
+                                </a>
+
+                                <a href="?p=subCat">
+                                    <div class="col-lg-4 col-md-4 hov-img">
+                                        <div style="border-radius: 15px !important; margin: 5px; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
+                                        </div>
+                                        <div class="categories__post__item__text text-center">
+                                            <span style="font-size: 30px ; " class="post__label">LAPTOPS</span>
+                                            <h3><a style="padding: 0px !important; margin: 10px 0px 10px 0px;" href="#">This is all about laptops , 3 Creative Ways</a></h3>
+                                        </div>
                                     </div>
-                                    <ul>
-                                        <li><a href="#">Recipes <span>128</span></a></li>
-                                        <li><a href="#">Dinner <span>32</span></a></li>
-                                        <li><a href="#">Dessert <span>86</span></a></li>
-                                        <li class="p-left"><a href="#">Smothie <span>25</span></a></li>
-                                        <li class="p-left"><a href="#">Drinks <span>36</span></a></li>
-                                        <li class="p-left"><a href="#">Cakes <span>15</span></a></li>
-                                        <li><a href="#">Vegan <span>63</span></a></li>
-                                        <li><a href="#">Weightloss <span>27</span></a></li>
-                                    </ul>
-                                </div>
-                                <div class="sidebar__subscribe__item">
-                                    <div class="sidebar__item__title">
-                                        <h6>Subscribe</h6>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                        <!-- //////////// -->
+
+                        <div class="categories__list__post__item">
+                            <div class="row">
+                                <a href="?p=subCat">
+                                    <div class="col-lg-4 col-md-4 hov-img">
+                                        <div style="border-radius: 15px !important; margin: 5px; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
+                                        </div>
+                                        <div class="categories__post__item__text text-center">
+                                            <span style="font-size: 30px ; " class="post__label">LAPTOPS</span>
+                                            <h3><a style="padding: 0px !important; margin: 10px 0px 10px 0px;" href="#">This is all about laptops , 3 Creative Ways</a></h3>
+                                        </div>
                                     </div>
-                                    <p>Subscribe to our newsletter and get our newest updates right on your inbox.</p>
-                                    <form action="#">
-                                        <input type="text" class="email-input" placeholder="Your email">
-                                        <label for="s-agree-check">
-                                            I agree to the terms & conditions
-                                            <input type="checkbox" id="s-agree-check">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <button type="submit" class="site-btn">Subscribe</button>
-                                    </form>
+                                </a>
+
+                                <a href="?p=subCat">
+                                    <div class="col-lg-4 col-md-4 hov-img">
+                                        <div style="border-radius: 15px !important; margin: 5px; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
+                                        </div>
+                                        <div class="categories__post__item__text text-center">
+                                            <span style="font-size: 30px ; " class="post__label">LAPTOPS</span>
+                                            <h3><a style="padding: 0px !important; margin: 10px 0px 10px 0px;" href="#">This is all about laptops , 3 Creative Ways</a></h3>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="?p=subCat">
+                                    <div class="col-lg-4 col-md-4 hov-img">
+                                        <div style="border-radius: 15px !important; margin: 5px; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
+                                        </div>
+                                        <div class="categories__post__item__text text-center">
+                                            <span style="font-size: 30px ; " class="post__label">LAPTOPS</span>
+                                            <h3><a style="padding: 0px !important; margin: 10px 0px 10px 0px;" href="#">This is all about laptops , 3 Creative Ways</a></h3>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="col">
+                            <div class="col-lg-12">
+                                <div class="categories__pagination">
+                                    <a href="#">1</a>
+                                    <a href="#">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">Next</a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    </div>
+
                 </div>
             </div>
         </div>
-    </section>
-    <!-- Categories Section End -->
+    </div>
+</section>
+<!-- Categories Section End -->
