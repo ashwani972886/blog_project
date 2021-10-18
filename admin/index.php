@@ -2,8 +2,6 @@
 
     include("functions.php");
 
-    
-
     if($session_id){
 
         include("header.php");
@@ -31,8 +29,5 @@
     
     }
     
-    
-
-
 
 ?>
