@@ -66,7 +66,14 @@
                 <p class="login-card-description">Sign Up Your Account</p>
                 <form method="dialog">
                   <div class="form-group mb-4">
-                    <input type="text" name="email" id="s_name" class="form-control" placeholder="Name">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <input type="text" name="name" id="s_firstname" class="form-control" placeholder="First Name">
+                      </div>
+                      <div class="col-md-6">
+                        <input type="text" name="name" id="s_lastname" class="form-control" placeholder="Last Name">
+                      </div>
+                    </div>
                     <input type="email" name="Email" id="s_email" class="form-control" placeholder="Email Address">
                     <input type="number" name="mobile_no" id="s_mobile_no" placeholder="Mobile Number" class="form-control">
                     <input type="password" name="password" id="s_password" placeholder="Password" class="form-control">
@@ -109,7 +116,7 @@
       $.ajax({
         type: "POST",
         url: "actions.php?action=signUp_admin",
-        data: "name=" + $("#s_name").val() + "&email=" + $("#s_email").val() 
+        data: "first_name=" + $("#s_firstname").val() + "&last_name=" + $("#s_lastname").val() + "&email=" + $("#s_email").val() 
                 + "&mobile=" + $("#s_mobile_no").val() + "&password=" + $("#s_password").val(),
         success: function(result) {
             

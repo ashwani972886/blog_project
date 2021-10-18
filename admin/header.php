@@ -15,6 +15,8 @@
     <link href="./main.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/tagsinput.css">
 
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
 
 </head>
 

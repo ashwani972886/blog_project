@@ -2,6 +2,20 @@
 <html lang="en">
 
 <head>
+
+    <!-- aqib -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <!--page style-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css'>
+    <!-- aqib -->
+
+
     <meta charset="UTF-8">
     <meta name="description" content="MeeMineForever Blog Website">
     <meta name="keywords" content="MeeMineForever, unica, creative, html">
@@ -15,6 +29,7 @@
     <link href="https://fonts.googleapis.com/css?family=Unna:400,700&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
+    <link rel="stylesheet" href="css/AqibSlider.css" type="text/css">
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
@@ -175,7 +190,8 @@
                                 </li>
 
                                 <li><a href="#">fiction</a></li>
-                                <li><a href="?p=relation">relationship</a></li>
+                                <!-- <li><a href="?p=relation">relationship</a></li> -->
+                                <li><a href="?p=123">relationship</a></li>
                                 <li class="dropdown"><a href="#">fashion</a>
 
                                     <ul class="dropdown__menu">
