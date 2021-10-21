@@ -8,7 +8,7 @@
                     <div class="row">
                         <div class="col-lg-8 col-md-8">
                             <div class="breadcrumb__text">
-                                <h2>Categories: <span><b> LAPTOPS</b></span></h2>
+                                <h2>Categories: <span><b>TECHNOLOGY / LAPTOPS</b></span></h2>
                                 <div class="breadcrumb__option">
                                     <a href="#">Home</a>
                                     <span>TECHNOLOGY /<b> LAPTOPS</b></span>
@@ -17,7 +17,7 @@
                             <div class="categories__list__post__item">
                                 <div class="row inside-hov-img">
                                     <div class="col-lg-6 col-md-6">
-                                        <div style="border-radius: 15px !important; margin: 5px; transform: rotate(-5deg); border:2px #F4952F solid " class="categories__post__item__pic set-bg "
+                                        <div id="imgHov" style="border-radius: 15px !important; margin: 5px; transform: rotate(-5deg); border:2px #F4952F solid " class="categories__post__item__pic set-bg "
                                             data-setbg="img/categories/categories-list/cl-1.jpg">
                                             <div class="post__meta">
                                                 <h4>08</h4>
@@ -45,7 +45,7 @@
                             <div class="categories__list__post__item">
                                 <div class="row inside-hov-img">
                                     <div class="col-lg-6 col-md-6">
-                                        <div style="border-radius: 15px !important; margin: 5px; transform: rotate(5deg); border:2px #F4952F solid " class="categories__post__item__pic set-bg"
+                                        <div id="imgHov" style="border-radius: 15px !important; margin: 5px; transform: rotate(5deg); border:2px #F4952F solid " class="categories__post__item__pic set-bg"
                                             data-setbg="img/categories/categories-list/cl-1.jpg">
                                             <div class="post__meta">
                                                 <h4>08</h4>
@@ -74,7 +74,7 @@
                            <div class="categories__list__post__item">
                                 <div class="row  inside-hov-img">
                                     <div class="col-lg-6 col-md-6">
-                                        <div style="border-radius: 15px !important; margin: 5px; transform: rotate(-5deg); border:2px #F4952F solid " class="categories__post__item__pic set-bg"
+                                        <div id="imgHov" style="border-radius: 15px !important; margin: 5px; transform: rotate(-5deg); border:2px #F4952F solid " class="categories__post__item__pic set-bg"
                                             data-setbg="img/categories/categories-list/cl-1.jpg">
                                             <div class="post__meta">
                                                 <h4>08</h4>
@@ -102,7 +102,7 @@
                             <div class="categories__list__post__item">
                                 <div class="row inside-hov-img">
                                     <div class="col-lg-6 col-md-6">
-                                        <div style="border-radius: 15px !important; margin: 5px; transform: rotate(5deg); border:2px #F4952F solid " class="categories__post__item__pic set-bg"
+                                        <div id="imgHov"  style="border-radius: 15px !important; margin: 5px; transform: rotate(5deg); border:2px #F4952F solid " class="categories__post__item__pic set-bg"
                                             data-setbg="img/categories/categories-list/cl-1.jpg">
                                             <div class="post__meta">
                                                 <h4>08</h4>
@@ -132,7 +132,7 @@
                             <div class="categories__list__post__item">
                                 <div class="row inside-hov-img">
                                     <div class="col-lg-6 col-md-6">
-                                        <div style="border-radius: 15px !important; margin: 5px; transform: rotate(5deg); border:2px #F4952F solid " class="categories__post__item__pic set-bg"
+                                        <div id="imgHov"  style="border-radius: 15px !important; margin: 5px; transform: rotate(5deg); border:2px #F4952F solid " class="categories__post__item__pic set-bg"
                                             data-setbg="img/categories/categories-list/cl-1.jpg">
                                             <div class="post__meta">
                                                 <h4>08</h4>
@@ -160,7 +160,7 @@
                             <div class="categories__list__post__item">
                                 <div class="row inside-hov-img">
                                     <div class="col-lg-6 col-md-6">
-                                        <div style="border-radius: 15px !important; margin: 5px; transform: rotate(5deg); border:2px #F4952F solid " class="categories__post__item__pic set-bg"
+                                        <div id="imgHov"  style="border-radius: 15px !important; margin: 5px; transform: rotate(5deg); border:2px #F4952F solid " class="categories__post__item__pic set-bg"
                                             data-setbg="img/categories/categories-list/cl-1.jpg">
                                             <div class="post__meta">
                                                 <h4>08</h4>
@@ -188,7 +188,7 @@
                             <div class="categories__list__post__item">
                                 <div class="row inside-hov-img">
                                     <div class="col-lg-6 col-md-6">
-                                        <div style="border-radius: 15px !important; margin: 5px; transform: rotate(-5deg); border:2px #F4952F solid " class="categories__post__item__pic set-bg"
+                                        <div id="imgHov"  style="border-radius: 15px !important; margin: 5px; transform: rotate(-5deg); border:2px #F4952F solid " class="categories__post__item__pic set-bg"
                                             data-setbg="img/categories/categories-list/cl-1.jpg">
                                             <div class="post__meta">
                                                 <h4>08</h4>
@@ -230,8 +230,8 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4">
-                            <!-- <div class="sidebar__item">
-                                <div class="sidebar__about__item">
+                            <div class="sidebar__item">
+                                <!-- <div class="sidebar__about__item">
                                     <div class="sidebar__item__title">
                                         <h6>About me</h6>
                                     </div>
@@ -240,10 +240,10 @@
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                         incididunt ut labore et dolore magna aliqua.</p>
                                     <a href="#" class="primary-btn">Read more</a>
-                                </div>
+                                </div> -->
                                 <div class="sidebar__follow__item">
                                     <div class="sidebar__item__title">
-                                        <h6>Follow me</h6>
+                                        <h6 style="font-size: large;"> <b> Follow Us </b></h6>
                                     </div>
                                     <div class="sidebar__item__follow__links">
                                         <a href="#"><i class="fa fa-facebook"></i></a>
@@ -255,7 +255,7 @@
                                 </div>
                                 <div class="sidebar__feature__item">
                                     <div class="sidebar__item__title">
-                                        <h6>Feature Posts</h6>
+                                        <h6 style="font-size: large;"><b>Feature Posts</b> </h6>
                                     </div>
                                     <div class="sidebar__feature__item__large set-bg"
                                         data-setbg="img/sidebar/feature-post.jpg">
@@ -342,7 +342,7 @@
                                         <button type="submit" class="site-btn">Subscribe</button>
                                     </form>
                                 </div>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                 </div>

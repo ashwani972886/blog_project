@@ -124,13 +124,13 @@
             <div class="categories__grid__post">
                 <div class="row">
                     <div class="row-lg-8 row-md-8">
-                        <!-- <div class="breadcrumb__text">
+                        <div class="breadcrumb__text">
                                 <h2>Categories: <span>TECHNOLOGY</span></h2>
                                 <div class="breadcrumb__option">
                                     <a href="#">Home</a>
                                     <span>Technology</span>
                                 </div>
-                            </div> -->
+                            </div>
 
 
                     <div>
@@ -138,7 +138,7 @@
                             <div class="row">
                                 <a href="?p=subCat">
                                     <div class="col-lg-4 col-md-4 hov-img">
-                                        <div style="border-radius: 15px !important; margin: 5px; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
+                                        <div id="imgHov" style="border-radius: 15px !important; margin: 5px; margin-bottom: 20px !important; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
                                         </div>
                                         <div class="categories__post__item__text text-center">
                                             <span style="font-size: 30px ; " class="post__label">LAPTOPS</span>
@@ -149,7 +149,7 @@
 
                                 <a href="?p=subCat">
                                     <div class="col-lg-4 col-md-4 hov-img">
-                                        <div style="border-radius: 15px !important; margin: 5px; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
+                                        <div id="imgHov" style="border-radius: 15px !important; margin: 5px; margin-bottom: 20px !important;  border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
                                         </div>
                                         <div class="categories__post__item__text text-center">
                                             <span style="font-size: 30px ; " class="post__label">LAPTOPS</span>
@@ -160,7 +160,7 @@
 
                                 <a href="?p=subCat">
                                     <div class="col-lg-4 col-md-4 hov-img">
-                                        <div style="border-radius: 15px !important; margin: 5px; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
+                                        <div id="imgHov"  style="border-radius: 15px !important; margin: 5px; margin-bottom: 20px !important;  border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
                                         </div>
                                         <div class="categories__post__item__text text-center">
                                             <span style="font-size: 30px ; " class="post__label">LAPTOPS</span>
@@ -178,7 +178,7 @@
                             <div class="row">
                                 <a href="?p=subCat">
                                     <div class="col-lg-4 col-md-4 hov-img">
-                                        <div style="border-radius: 15px !important; margin: 5px; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
+                                        <div id="imgHov" style="border-radius: 15px !important; margin: 5px; margin-bottom: 20px; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
                                         </div>
                                         <div class="categories__post__item__text text-center">
                                             <span style="font-size: 30px ; " class="post__label">LAPTOPS</span>
@@ -189,7 +189,7 @@
 
                                 <a href="?p=subCat">
                                     <div class="col-lg-4 col-md-4 hov-img">
-                                        <div style="border-radius: 15px !important; margin: 5px; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
+                                        <div id="imgHov" style="border-radius: 15px !important; margin: 5px; margin-bottom: 20px; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
                                         </div>
                                         <div class="categories__post__item__text text-center">
                                             <span style="font-size: 30px ; " class="post__label">LAPTOPS</span>
@@ -200,7 +200,7 @@
 
                                 <a href="?p=subCat">
                                     <div class="col-lg-4 col-md-4 hov-img">
-                                        <div style="border-radius: 15px !important; margin: 5px; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
+                                        <div id="imgHov" style="border-radius: 15px !important; margin: 5px; margin-bottom: 20px; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
                                         </div>
                                         <div class="categories__post__item__text text-center">
                                             <span style="font-size: 30px ; " class="post__label">LAPTOPS</span>
@@ -219,7 +219,7 @@
                             <div class="row">
                                 <a href="?p=subCat">
                                     <div class="col-lg-4 col-md-4 hov-img">
-                                        <div style="border-radius: 15px !important; margin: 5px; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
+                                        <div id="imgHov" style="border-radius: 15px !important; margin: 5px; margin-bottom: 20px; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
                                         </div>
                                         <div class="categories__post__item__text text-center">
                                             <span style="font-size: 30px ; " class="post__label">LAPTOPS</span>
@@ -230,7 +230,7 @@
 
                                 <a href="?p=subCat">
                                     <div class="col-lg-4 col-md-4 hov-img">
-                                        <div style="border-radius: 15px !important; margin: 5px; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
+                                        <div  id="imgHov" style="border-radius: 15px !important; margin: 5px; margin-bottom: 20px; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
                                         </div>
                                         <div class="categories__post__item__text text-center">
                                             <span style="font-size: 30px ; " class="post__label">LAPTOPS</span>
@@ -241,7 +241,7 @@
 
                                 <a href="?p=subCat">
                                     <div class="col-lg-4 col-md-4 hov-img">
-                                        <div style="border-radius: 15px !important; margin: 5px; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
+                                        <div id="imgHov" style="border-radius: 15px !important; margin: 5px; margin-bottom: 20px; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
                                         </div>
                                         <div class="categories__post__item__text text-center">
                                             <span style="font-size: 30px ; " class="post__label">LAPTOPS</span>
