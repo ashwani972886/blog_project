@@ -277,18 +277,37 @@ h1.card__title {
 
 .hov-img :hover{
     transform: scale(1.05);
-   
+   /* box-shadow: 10px 10px 7px 0px black; */
 }
 
 .inside-hov-img :hover{
     transform: scale(1.05);
+    /* box-shadow: 10px 10px 7px 0px black; */
     /* transform: rotate(-5deg); */
    
 }
+#imgHov:hover{
+    box-shadow: 10px 10px 7px 0px #F4952F;
+}
+
 .bound-mng{
     width: 70%;
     margin: auto;
     border: 5px solid black;
     border-top-left-radius: 70px;
     border-bottom-right-radius: 70px ;
+}
+
+#img-round{
+    /* border-radius: 50px solid red !important; */
+    /* border-radius: 50px ; */
+   /* border-top-right-radius: 50px; */
+   border-top-left-radius: 50px;
+   border-bottom-right-radius: 50px;
+
+
+    border: 3px solid #F4952F;
+    height: 70vh;
+    width: 80%;
+    margin: auto;
 }

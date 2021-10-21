@@ -43,16 +43,16 @@
                     <div class="col-lg-6 col-md-6">
                         <div class="contact__form">
                             <div class="contact__form__title">
-                                <h2>GET IN TOUCH</h2>
-                                <p>My experience with Realy is absolutely positive. The themes are beautifully designed
-                                    and well documented. Realy theme provides quick support.</p>
+                                <h2> <b>GET IN TOUCH</b> </h2>
+                                <!-- <p>My experience with Realy is absolutely positive. The themes are beautifully designed
+                                    and well documented. Realy theme provides quick support.</p> -->
                             </div>
                             <form action="#">
                                 <input type="text" placeholder="Name">
                                 <input type="text" placeholder="Email">
-                                <input type="text" placeholder="Website">
+                                <input type="text" placeholder="issu">
                                 <textarea placeholder="Message"></textarea>
-                                <button type="submit" class="site-btn">Submit</button>
+                                <button style="border-radius: 29px;" type="submit" class="site-btn">Submit</button>
                             </form>
                         </div>
                     </div>
