@@ -298,7 +298,7 @@ h1.card__title {
     border-bottom-right-radius: 70px ;
 }
 
-#img-round{
+.img-round{
     /* border-radius: 50px solid red !important; */
     /* border-radius: 50px ; */
    /* border-top-right-radius: 50px; */
@@ -307,7 +307,7 @@ h1.card__title {
 
 
     border: 3px solid #F4952F;
-    height: 70vh;
-    width: 80%;
+    height: 50vh;
+    width: 100%;
     margin: auto;
 }
