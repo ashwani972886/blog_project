@@ -64,7 +64,7 @@
                             <div class="position-relative form-group">
                                 <!-- <label for="title" class=""><h3>Title</h3></label> -->
                                 <select name="getCategory" id="getCategory" class="form-control">
-                                    <option selected><?php if($draft['category'] != "") { echo $draft['category']; } ?></option>
+                                    <option selected><?php if($draft['category'] != "") { echo $draft['category']; } else { echo "Category"; } ?></option>
                                     <option value="Food Recipes">Food Recipes</option>
                                     <option value="Fiction">Fiction</option>
                                     <option value="Relationship">Relationship</option>
@@ -77,7 +77,7 @@
                             <div class="position-relative form-group">
                                 <!-- <label for="title" class=""><h3>Title</h3></label> -->
                                 <select name="getSubCategory" id="getSubCategory" class="form-control">
-                                    <option selected><?php if($draft['sub_category'] != "") { echo $draft['sub_category']; } ?></option>
+                                    <option selected><?php if($draft['sub_category'] != "") { echo $draft['sub_category']; } else { echo "Sub-Category"; }?></option>
                                     <option value="Technology">Technology</option>
                                     <option value="Historical Monuments">Historical Monuments</option>
                                     <option value="Health Tips">Health Tips</option>
@@ -213,7 +213,7 @@
             <div class="app-footer-right">
                 <ul class="nav">
                     <li class="nav-item">
-                        <button class="btn btn-danger">
+                        <button name="publishBlog" class="btn btn-danger">
                             Publish
                         </button>
                     </li>
@@ -258,8 +258,37 @@ if(isset($_POST['saveDraft'])){
     draftpost($session_id, $isPreview);
 }
 
+if(isset($_POST['publishBlog'])){
+    draftpost($session_id,2);
+    
+}
+
+
+function post_blog($draft_id){
+    $link = mysqli_connect("localhost", "root", "", "blog_db");
+    date_default_timezone_set('Asia/Kolkata');
+
+    $date = date("Y-m-d H:i:s");
+
+    $query = "INSERT INTO `posts` (post_id, user_id, user_name, title_img, title, category, sub_category, description, quote_desc, quote_author, tags, quote_s, profile_s, comment_s)
+                SELECT post_id, user_id, user_name, title_img, title, category, sub_category, description, quote_desc, quote_author, tags, quote_s, profile_s, comment_s
+                FROM `post_draft` WHERE `id` = '".$draft_id."' ";
+    if(mysqli_query($link, $query)){
+        $recent = mysqli_insert_id($link);
+        $query1 = "UPDATE `posts` SET date_time = '".mysqli_real_escape_string($link, $date)."' WHERE `id` = '".$recent."'";
+        if(mysqli_query($link, $query1)){
+            $delete_draft = "DELETE FROM `post_draft` WHERE `id` = '".$draft_id."'";
+            if(mysqli_query($link, $delete_draft)) {
+                echo "<script> alert('Post Published!'); </script>";
+            }
+            
+        }
+    }
+}
+
 function draftpost($session_id, $isPreview){
     $link = mysqli_connect("localhost", "root", "", "blog_db");
+    date_default_timezone_set('Asia/Kolkata');
 
     $date = date("Y-m-d H:i:s");
 
@@ -331,13 +360,16 @@ function draftpost($session_id, $isPreview){
             //     $i = $i+1;
             // } 
 
-            echo "<script> alert('Draft Saved'); </script>";
+            
 
             if($isPreview == 0){
+                echo "<script> alert('Draft Saved'); </script>";
                 echo "<script> window.location.assign('http://localhost/blog_project/admin/?p=new_post&draft=".$draft_id."'); </script>";
                 
-            } else {
+            } else if($isPreview == 1){
                 echo "<script> window.location.assign('http://localhost/blog_project/preview/?draft=".$draft_id."'); </script>";
+            } else {
+                post_blog($_GET['draft']);
             }
 
         } 

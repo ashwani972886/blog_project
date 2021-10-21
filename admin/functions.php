@@ -1,5 +1,5 @@
 <?php
-
+    date_default_timezone_set('Asia/Kolkata');
     session_start();
 
     $page = isset($_GET['p']) ? $_GET['p'] : '';
@@ -36,6 +36,10 @@ if($session_id){
 
     $user = mysqli_fetch_assoc($result);
 }
+
+
+
+
 // function asd($array, $id){
 
 // $link = mysqli_connect("localhost", "root", "", "cc");
