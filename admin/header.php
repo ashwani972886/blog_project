@@ -118,7 +118,8 @@
                             
                             <li class="app-sidebar__heading">NAVIGATION</li>
                             <li>
-                                <a href="?p=new_post">
+                                
+                                <a href="" id="new_post">
                                     <i class="fa fa-fw metismenu-icon" aria-hidden="true"></i>
                                     New Post
                                 </a>

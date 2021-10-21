@@ -27,6 +27,15 @@
 
 ?>
 <?php
+
+if($session_id){
+        
+    $query = "SELECT * FROM blogger_users WHERE `id` = '".mysqli_real_escape_string($link, $_SESSION['id'])."' LIMIT 1";
+
+    $result = mysqli_query($link, $query);
+
+    $user = mysqli_fetch_assoc($result);
+}
 // function asd($array, $id){
 
 // $link = mysqli_connect("localhost", "root", "", "cc");

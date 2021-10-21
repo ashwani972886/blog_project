@@ -59,10 +59,59 @@
     
     }
 
-    if($_GET['action'] == "saveAsDraft"){
+    if($_GET['action'] == "save_new_draftId"){
+
+        $select_draft = "SELECT * FROM `post_draft` WHERE `user_id` = '".mysqli_real_escape_string($link, $user['user_id'])."' ";
+
+        $result = mysqli_query($link,$select_draft);
+
+            if(mysqli_num_rows($result)>0){
+
+                $emptyDraft = 0;
+                while( $draft = mysqli_fetch_assoc($result) ){
+                    
+                    
+                    if($draft['post_id'] == ""){
+                        echo $draft['id'];
+                        $emptyDraft = 1;
+                        break;
+                    } else {
+                        continue;
+                    }
+                
+                }
+
+                if($emptyDraft == 0){
+                    $userName = $user['first_name']." ".$user['last_name'];
+                    $query = "INSERT INTO post_draft (`user_id`, `user_name`)
+                    VALUES ('".mysqli_real_escape_string($link, $user['user_id'])."',
+                            '".mysqli_real_escape_string($link, $userName)."')";
+    
+                    if(mysqli_query($link, $query)){
+                        $draft_id = mysqli_insert_id($link);
+                        echo $draft_id;
+                    }
+                }
+
+            } else {
+                $userName = $user['first_name']." ".$user['last_name'];
+                $query = "INSERT INTO post_draft (`user_id`, `user_name`)
+                VALUES ('".mysqli_real_escape_string($link, $user['user_id'])."',
+                        '".mysqli_real_escape_string($link, $userName)."')";
+
+                if(mysqli_query($link, $query)){
+                    $draft_id = mysqli_insert_id($link);
+                    echo $draft_id;
+                }
+                
+            }
+
     
         
-        echo $_POST['blogContent'];
+
+        
+
+    
     }
     
 
