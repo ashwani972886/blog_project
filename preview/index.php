@@ -171,7 +171,11 @@
 
     <!-- Single Post Section Begin -->
     <section class="single-post spad">
-        <img class="single-post__hero set-bg img-round" src="../admin/post_images/<?php echo $row['title_img'] ?>"  >
+        <!-- <img class="single-post__hero set-bg img-round" src="../admin/post_images/<?php echo $row['title_img'] ?>"  > -->
+        <div>
+                <img style="height: 50vh; width: 70vw; margin-left: 15%; border-radius: 30px; border: 2px solid #F4952F;" src="img/categories/single-post/single-post-hero.jpg" alt="">
+            </div>
+            
         <!-- <div class="single-post__hero set-bg " style="position: inherit;" data-setbg="../admin/post_images/<?php echo $row['title_img'] ?>"></div> -->
         <div class="container">
             <div class="row d-flex justify-content-center">
