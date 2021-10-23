@@ -38,7 +38,6 @@ if($session_id){
     $user = mysqli_fetch_assoc($result);
 }
 
-
 function draftpost($session_id, $isPreview){
     
     // $link = mysqli_connect("localhost", "root", "", "blog_db");
@@ -141,5 +140,6 @@ function post_blog($draft_id){
         }
     }
 }
+
 
 ?>

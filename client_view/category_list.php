@@ -1,3 +1,12 @@
+
+<?php
+
+    $filterd_cat = str_replace("_", " ", $category);
+
+    
+
+?>
+
 <div  style=" background-color: #F4952F;" class="bound-mng" >
 
 
@@ -86,7 +95,6 @@
                 <button class="modal__close-button" type="button">
                     <!-- <h1>aqib</h1> -->
                     <svg class="icon icon-cross">
-                        <h1>ajsdljasdlfjklasdf</h1>
                         <use xlink:href="#icon-cross"></use>
                     </svg>
                 </button>
@@ -108,13 +116,6 @@
         </div>
     </div>
 
-    <!-- partial -->
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.1/web-animations.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.3.1/smooth-scrollbar.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js'></script>
-    <script src="js/script.js"></script>
-
 </div>
 
 <!-- Categories Section Begin -->
@@ -123,12 +124,12 @@
         <div class="container">
             <div class="categories__grid__post">
                 <div class="row">
-                    <div class="row-lg-8 row-md-8">
+                    <div class="col-lg-12 col-md-12">
                         <div class="breadcrumb__text">
-                                <h2>Categories: <span>TECHNOLOGY</span></h2>
+                                <h2>Categories: <span><?php echo ucfirst($filterd_cat); ?></span></h2>
                                 <div class="breadcrumb__option">
-                                    <a href="#">Home</a>
-                                    <span>Technology</span>
+                                    <a href="?p=home">Home</a>
+                                    <span><?php echo ucfirst($filterd_cat); ?></span>
                                 </div>
                             </div>
 
@@ -136,123 +137,41 @@
                     <div>
                         <div class="categories__list__post__item">
                             <div class="row">
-                                <a href="?p=subCat">
-                                    <div class="col-lg-4 col-md-4 hov-img">
-                                        <div id="imgHov" style="border-radius: 15px !important; margin: 5px; margin-bottom: 20px !important; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
-                                        </div>
-                                        <div class="categories__post__item__text text-center">
-                                            <span style="font-size: 30px ; " class="post__label">LAPTOPS</span>
-                                            <h3><a style="padding: 0px !important; margin: 10px 0px 10px 0px;" href="#">This is all about laptops , 3 Creative Ways</a></h3>
-                                        </div>
-                                    </div>
-                                </a>
 
-                                <a href="?p=subCat">
-                                    <div class="col-lg-4 col-md-4 hov-img">
-                                        <div id="imgHov" style="border-radius: 15px !important; margin: 5px; margin-bottom: 20px !important;  border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
-                                        </div>
-                                        <div class="categories__post__item__text text-center">
-                                            <span style="font-size: 30px ; " class="post__label">LAPTOPS</span>
-                                            <h3><a style="padding: 0px !important; margin: 10px 0px 10px 0px;" href="#">This is all about laptops , 3 Creative Ways</a></h3>
-                                        </div>
-                                    </div>
-                                </a>
+                                <?php
+                                    $query = "SELECT * FROM sub_category WHERE `category` = '".$category."' ";
 
-                                <a href="?p=subCat">
-                                    <div class="col-lg-4 col-md-4 hov-img">
-                                        <div id="imgHov"  style="border-radius: 15px !important; margin: 5px; margin-bottom: 20px !important;  border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
-                                        </div>
-                                        <div class="categories__post__item__text text-center">
-                                            <span style="font-size: 30px ; " class="post__label">LAPTOPS</span>
-                                            <h3><a style="padding: 0px !important; margin: 10px 0px 10px 0px;" href="#">This is all about laptops , 3 Creative Ways</a></h3>
-                                        </div>
-                                    </div>
-                                </a>
+                                    $result = mysqli_query($link, $query);
+                                    if(mysqli_num_rows($result)>0){
+        
+                                        $count = 0;
+                                        while( $sub_categories = mysqli_fetch_assoc($result) ){
+                                            $count++;
+                                    
+                                ?>
+
+                                            <a href="?p=subCat&cat_val=<?php echo $category ?>&sub_cat_val=<?php echo $sub_categories['sub_category']?>">
+                                                <div class="col-lg-4 col-md-4 hov-img" style="width: 100%;">
+                                                    <div id="imgHov" style="border-radius: 15px !important; margin: 5px; margin-bottom: 20px !important; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
+                                                    </div>
+                                                    <div class="categories__post__item__text text-center">
+                                                        <span style="font-size: 30px ; " class="post__label"><?php echo ucfirst($sub_categories['sub_category']); ?></span>
+                                                        <h3><a style="padding: 0px !important; margin: 10px 0px 10px 0px;" href="?p=subCat&sub_cat_val=<?php echo $sub_categories['sub_category']?>"></a></h3>
+                                                    </div>
+                                                </div>
+                                            </a>
+
+                                <?php 
+                                        }
+                                    }
+                                ?>
+
+                                
 
                             </div>
 
                         </div>
-                        <!-- ////////// -->
-
-                        <div class="categories__list__post__item">
-                            <div class="row">
-                                <a href="?p=subCat">
-                                    <div class="col-lg-4 col-md-4 hov-img">
-                                        <div id="imgHov" style="border-radius: 15px !important; margin: 5px; margin-bottom: 20px; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
-                                        </div>
-                                        <div class="categories__post__item__text text-center">
-                                            <span style="font-size: 30px ; " class="post__label">LAPTOPS</span>
-                                            <h3><a style="padding: 0px !important; margin: 10px 0px 10px 0px;" href="#">This is all about laptops , 3 Creative Ways</a></h3>
-                                        </div>
-                                    </div>
-                                </a>
-
-                                <a href="?p=subCat">
-                                    <div class="col-lg-4 col-md-4 hov-img">
-                                        <div id="imgHov" style="border-radius: 15px !important; margin: 5px; margin-bottom: 20px; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
-                                        </div>
-                                        <div class="categories__post__item__text text-center">
-                                            <span style="font-size: 30px ; " class="post__label">LAPTOPS</span>
-                                            <h3><a style="padding: 0px !important; margin: 10px 0px 10px 0px;" href="#">This is all about laptops , 3 Creative Ways</a></h3>
-                                        </div>
-                                    </div>
-                                </a>
-
-                                <a href="?p=subCat">
-                                    <div class="col-lg-4 col-md-4 hov-img">
-                                        <div id="imgHov" style="border-radius: 15px !important; margin: 5px; margin-bottom: 20px; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
-                                        </div>
-                                        <div class="categories__post__item__text text-center">
-                                            <span style="font-size: 30px ; " class="post__label">LAPTOPS</span>
-                                            <h3><a style="padding: 0px !important; margin: 10px 0px 10px 0px;" href="#">This is all about laptops , 3 Creative Ways</a></h3>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
-
-                        </div>
-
-                        <!-- //////////// -->
-
-                        <div class="categories__list__post__item">
-                            <div class="row">
-                                <a href="?p=subCat">
-                                    <div class="col-lg-4 col-md-4 hov-img">
-                                        <div id="imgHov" style="border-radius: 15px !important; margin: 5px; margin-bottom: 20px; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
-                                        </div>
-                                        <div class="categories__post__item__text text-center">
-                                            <span style="font-size: 30px ; " class="post__label">LAPTOPS</span>
-                                            <h3><a style="padding: 0px !important; margin: 10px 0px 10px 0px;" href="#">This is all about laptops , 3 Creative Ways</a></h3>
-                                        </div>
-                                    </div>
-                                </a>
-
-                                <a href="?p=subCat">
-                                    <div class="col-lg-4 col-md-4 hov-img">
-                                        <div  id="imgHov" style="border-radius: 15px !important; margin: 5px; margin-bottom: 20px; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
-                                        </div>
-                                        <div class="categories__post__item__text text-center">
-                                            <span style="font-size: 30px ; " class="post__label">LAPTOPS</span>
-                                            <h3><a style="padding: 0px !important; margin: 10px 0px 10px 0px;" href="#">This is all about laptops , 3 Creative Ways</a></h3>
-                                        </div>
-                                    </div>
-                                </a>
-
-                                <a href="?p=subCat">
-                                    <div class="col-lg-4 col-md-4 hov-img">
-                                        <div id="imgHov" style="border-radius: 15px !important; margin: 5px; margin-bottom: 20px; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
-                                        </div>
-                                        <div class="categories__post__item__text text-center">
-                                            <span style="font-size: 30px ; " class="post__label">LAPTOPS</span>
-                                            <h3><a style="padding: 0px !important; margin: 10px 0px 10px 0px;" href="#">This is all about laptops , 3 Creative Ways</a></h3>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
-
-                        </div>
+                        
 
 
                         <div class="col">

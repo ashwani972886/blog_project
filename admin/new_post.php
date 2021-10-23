@@ -64,12 +64,14 @@
                                 <!-- <label for="title" class=""><h3>Title</h3></label> -->
                                 <select name="getCategory" id="getCategory" class="form-control">
                                     <option selected><?php if($draft['category'] != "") { echo $draft['category']; } else { echo "Category"; } ?></option>
+
                                     <option value="Food Recipes">Food Recipes</option>
                                     <option value="Fiction">Fiction</option>
                                     <option value="Relationship">Relationship</option>
                                     <option value="Travel">Travel</option>
                                     <option value="Health & Beauty">Health & Beauty</option>
                                     <option value="Finance & Money">Finance & Money</option>
+
                                 </select>
                             </div>
                         </div>
@@ -263,5 +265,6 @@ if(isset($_POST['publishBlog'])){
     draftpost($session_id,2);
     
 }
+
 
 ?>
