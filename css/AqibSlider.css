@@ -311,3 +311,7 @@ h1.card__title {
     width: 100%;
     margin: auto;
 }
+.img-main-adj{
+    width: 70vw !important;
+    height: 70vh !important;
+}

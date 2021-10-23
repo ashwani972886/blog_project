@@ -1720,7 +1720,13 @@ ol {
 }
 
 .single-post__hero {
-	height: 960px;
+	/* height: 960px; */
+	height: 50px;
+	/* display: block; */
+	display: inline;
+	margin: auto;
+	border: 20px solid red;
+	/* align-items: center; */
 }
 
 .single-post__title {
@@ -3230,7 +3236,8 @@ ol {
 	}
 
 	.single-post__hero {
-		height: 700px;
+		/* height: 700px; */
+		height: 50vh;
 	}
 
 	.signin {
