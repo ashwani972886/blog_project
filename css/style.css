@@ -171,6 +171,7 @@ ol {
 	text-transform: uppercase;
 	font-weight: 700;
 	border: 1px solid #f4952f;
+	border-radius: 30px;
 }
 
 .site-btn {
@@ -1731,6 +1732,9 @@ ol {
 	position: relative;
 	margin-top: -105px;
 	margin-bottom: 50px;
+	/* border-top-right-radius: 30px; */
+	/* border: 2px solid #f4952f; */
+	border-radius: 20px;
 }
 
 .single-post__title__meta {
@@ -1741,6 +1745,7 @@ ol {
 	padding-top: 28px;
 	float: left;
 	margin-right: 30px;
+	border-radius: 30px;
 }
 
 .single-post__title__meta h2 {
@@ -1853,6 +1858,7 @@ ol {
 
 .single-post__social__item ul li a:last-child {
 	margin-right: 0;
+	border-radius: 15px;
 }
 
 .single-post__social__item ul li a:hover {
@@ -3263,6 +3269,7 @@ ol {
 	.single-post__title__meta {
 		float: none;
 		margin-right: 0;
+		/* border-radius: 30px !important; */
 	}
 
 	.single-post__title__text {

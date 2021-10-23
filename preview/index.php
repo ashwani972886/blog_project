@@ -43,6 +43,7 @@
     <link href="https://fonts.googleapis.com/css?family=Unna:400,700&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
+    <link rel="stylesheet" href="../css/AqibSlider.css" type="text/css">
     <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="../css/elegant-icons.css" type="text/css">
@@ -170,8 +171,8 @@
 
     <!-- Single Post Section Begin -->
     <section class="single-post spad">
-        <img src="../admin/post_images/<?php echo $row['title_img'] ?>" style="width: 100%;" alt="">
-        <!-- <div class="single-post__hero set-bg" style="position: inherit;" data-setbg="../admin/post_images/<?php echo $row['title_img'] ?>"></div> -->
+        <img class="single-post__hero set-bg img-round" src="../admin/post_images/<?php echo $row['title_img'] ?>"  >
+        <!-- <div class="single-post__hero set-bg " style="position: inherit;" data-setbg="../admin/post_images/<?php echo $row['title_img'] ?>"></div> -->
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-8">
@@ -187,7 +188,7 @@
                             </ul>
                             <h4><?php echo $row['title'] ?></h4>
                             <ul class="widget">
-                                <li>by Admin</li>
+                                <li>by <?php echo $row['user_name'] ?></li>
                                 <li>3 min read</li>
                                 <li>20 Comment</li>
                             </ul>
@@ -206,9 +207,8 @@
                         if($row['quote_s'] == "0"){
                     ?>
                         <div class="single-post__quote">
-                            <p>The whole family of tiny legumes, whether red, green, yellow, or black, offers so many
-                                possibilities to create an exciting lunch.</p>
-                            <span>MEIKE PETERS</span>
+                            <p><?php echo $row['quote_desc'] ?></p>
+                            <span><?php echo $row['quote_author'] ?></span>
                         </div>
                     <?php 
                         }

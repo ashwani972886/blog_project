@@ -192,6 +192,10 @@
                                 <li><a href="#">fiction</a></li>
                                 <!-- <li><a href="?p=relation">relationship</a></li> -->
                                 <li><a href="?p=123">relationship</a></li>
+
+                                
+                                <li><a href="?p=contact">CONTACT US</a></li>
+
                                 <li class="dropdown"><a href="#">fashion</a>
 
                                     <ul class="dropdown__menu">
@@ -203,10 +207,10 @@
                                         <li><a href="./typography.html">Typography</a></li>
                                     </ul>
                                 </li>
-
+<!-- 
                                 <li><a href="./about.html">travel</a></li>
                                 <li><a href="./contact.html">Career</a></li>
-                                <li><a href="./contact.html">health &beauty</a></li>
+                                <li><a href="./contact.html">health &beauty</a></li> -->
 
                             </ul>
                         </nav>

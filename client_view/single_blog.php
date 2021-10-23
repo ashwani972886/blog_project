@@ -2,7 +2,7 @@
 
 <!-- Single Post Section Begin -->
 <section class="single-post spad">
-        <div class="single-post__hero set-bg" data-setbg="img/categories/single-post/single-post-hero.jpg"></div>
+        <div id="" class="single-post__hero set-bg img-round" data-setbg="img/categories/single-post/single-post-hero.jpg"></div>
         <div class="container">
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-8">
