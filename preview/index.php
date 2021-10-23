@@ -1,6 +1,8 @@
 
 <?php
 
+    include("../admin/functions.php");
+    // $link = mysqli_connect("localhost", "root", "", "blog_db");
     $link = mysqli_connect("156.67.222.106", "u735106373_blog_project", "0204@Anujk", "u735106373_blog_project");
 
     $query = "SELECT * FROM post_draft WHERE `id` = '".$_GET['draft']."' ";
@@ -17,11 +19,7 @@
     $month = $splitDate[1];
     $day = $splitDate[2];
             
-    $monthName = date('M', mktime(0, 0, 0, $month, 10));
-    
-    
-
-    
+    $monthName = date('M', mktime(0, 0, 0, $month, 10)); 
 
 ?>
 
@@ -35,7 +33,7 @@
     <meta name="keywords" content="Foodeiblog, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Foodeiblog | Template</title>
+    <title>Preview| <?php echo $row['title']; ?></title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900&display=swap"
@@ -57,7 +55,10 @@
     <div id="preloder">
         <div class="loader"></div>
     </div>
-
+    <form method="POST" enctype="multipart/form-data">
+        <button class="btn btn-success" name="publishBlog" style="-moz-transform: rotate(90deg); -ms-transform:rotate(90deg); -o-transform:rotate(90deg);-webkit-transform:rotate(90deg); position: fixed; right:0%; top: 50%; margin:0; width: 200px;"><h3 style="color: white;">Publish Now!</h3></button>
+    </form>
+    
     <!-- Humberger Begin -->
     <div class="humberger__menu__overlay"></div>
     <div class="humberger__menu__wrapper">
@@ -147,33 +148,28 @@
             </div>
         </div>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-3">
+            <div class="row text-center">
+                <div class="col-lg-12 col-md-12">
 
                     <div class="header__logo">
                         <a href="#"><img src="../img/logo.png" alt=""></a>
                     </div>
                     
                 </div>
-                <div class="col-lg-6 col-md-6">
-                    
-                </div>
-                <div class="col-lg-3 col-md-3">
-                    <div class="header__btn">
-                        <a href="#" class="primary-btn">Post Your own Blog  </a>
-                    </div>
-                </div>                   
 
             </div>
         </div>
     </header>
     <!-- Header Section End -->
-
+    
     <!-- Single Post Section Begin -->
     <section class="single-post spad">
-        <img class="single-post__hero set-bg img-round" src="../admin/post_images/<?php echo $row['title_img'] ?>"  >
-        <!-- <div class="single-post__hero set-bg " style="position: inherit;" data-setbg="../admin/post_images/<?php echo $row['title_img'] ?>"></div> -->
+        <div>
+            <img style="height: 50vh; width: 70vw; margin-left: 15%; border: 2px solid #F4952F; border-radius: 30px;" src="../admin/post_images/<?php echo $row['title_img']; ?>">
+        </div>
+        
         <div class="container">
+            
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-8">
                     <div class="single-post__title">
@@ -189,11 +185,11 @@
                             <h4><?php echo $row['title'] ?></h4>
                             <ul class="widget">
                                 <li>by <?php echo $row['user_name'] ?></li>
-                                <li>3 min read</li>
                                 <li>20 Comment</li>
                             </ul>
                         </div>
                     </div>
+                    
                     <div class="single-post__social__item">
                         <ul>
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -229,42 +225,26 @@
                         }
                     ?>
                     <div class="single-post__tags">
-                        <a href="#">Food</a>
-                        <a href="#">Vegan</a>
-                        <a href="#">Tomato</a>
-                        <a href="#">Weightloss</a>
-                    </div>
-                    <!-- <div class="single-post__next__previous">
-                        <div class="row">
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <a href="#" class="single-post__previous">
-                                    <h6><span class="arrow_carrot-left"></span> Previous posts</h6>
-                                    <div class="single-post__previous__meta">
-                                        <h4>08</h4>
-                                        <span>Aug</span>
-                                    </div>
-                                    <div class="single-post__previous__text">
-                                        <span>Dinner</span>
-                                        <h5>The Best Weeknight Baked <br />Potatoes, 3 Creative Ways</h5>
-                                    </div>
+                        <?php
+                            $i = 0;
+                            $get_tag = $row['tags'];
+                            $tag = explode(',', $get_tag);
+                            while($i < count($tag)){
+                        ?>
+                                <a href="#">
+                                    <?php 
+                                        
+                                        echo $tag[$i];
+                                    ?>
                                 </a>
-                            </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6">
-                                <a href="#" class="single-post__next">
-                                    <h6>Next posts <span class="arrow_carrot-right"></span> </h6>
-                                    <div class="single-post__next__meta">
-                                        <h4>05</h4>
-                                        <span>Aug</span>
-                                    </div>
-                                    <div class="single-post__next__text">
-                                        <span>Smoothie</span>
-                                        <h5>The $8 French Rosé I Buy in <br />Bulk Every Summer</h5>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div> -->
+                        <?php
+                                $i += 1;
+                            }
+                        ?>
 
+                        
+                    </div>
+                    
                     <?php
                     
                         if($row['profile_s'] == "1"){
@@ -441,6 +421,12 @@
     <script src="../js/jquery.slicknav.js"></script>
     <script src="../js/owl.carousel.min.js"></script>
     <script src="../js/main.js"></script>
+
+    <?php
+        if(isset($_POST['publishBlog'])){
+            draftpost($session_id,2); 
+        }
+    ?>
 </body>
 
 </html>
