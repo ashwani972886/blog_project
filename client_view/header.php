@@ -61,19 +61,8 @@
                 <li><a href="#">travel</a></li>
                 <li><a href="#">career</a></li>
                 <li><a href="#">health &beauty</a></li>
-
-                <li class="dropdown"><a href="#">Pages</a>
-                    <ul class="dropdown__menu">
-                        <li><a href="./categories-grid.html">Categories Grid</a></li>
-                        <li><a href="./categories-list.html">Categories List</a></li>
-                        <li><a href="./single-post.html">Single Post</a></li>
-                        <li><a href="./signin.html">Sign In</a></li>
-                        <li><a href="./404.html">404</a></li>
-                        <li><a href="./typography.html">Typography</a></li>
-                    </ul>
-                </li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>
@@ -130,8 +119,15 @@
                         <nav class="header__menu">
                             <ul>
 
-                                <li class="active"><a href="./index.html">Home</a></li>
-                                <li><a href="#">food recepie</a>
+                                <!-- <li class="active"><a href="./index.html">Home</a></li> -->
+                                <li><a href="?p=cat_li&cat=food_recipies">food recipes</a></li>
+                                <li><a href="?p=cat_li&cat=fiction">Fiction</a></li>
+                                <li><a href="?p=cat_li&cat=relationship">Relationship</a></li>
+                                <li><a href="?p=cat_li&cat=fashion">Fashion</a></li>
+                                <li><a href="?p=cat_li&cat=travel">Travel</a></li>
+                                <li><a href="?p=cat_li&cat=career">Career</a></li>
+                                <li><a href="?p=cat_li&cat=health_n_beauty">Health & Beauty</a></li>
+                                <!-- <li><a href="#">food recepie</a>
 
                                     <div class="header__megamenu__wrapper">
                                         <div class="header__megamenu">
@@ -187,10 +183,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                </li>
+                                </li> -->
 
-                                <li><a href="#">fiction</a></li>
-                                <!-- <li><a href="?p=relation">relationship</a></li> -->
+                                <!-- <li><a href="#">fiction</a></li>
                                 <li><a href="?p=123">relationship</a></li>
 
                                 
@@ -206,8 +201,9 @@
                                         <li><a href="./404.html">404</a></li>
                                         <li><a href="./typography.html">Typography</a></li>
                                     </ul>
-                                </li>
-<!-- 
+                                </li> -->
+
+                                <!-- 
                                 <li><a href="./about.html">travel</a></li>
                                 <li><a href="./contact.html">Career</a></li>
                                 <li><a href="./contact.html">health &beauty</a></li> -->
@@ -228,7 +224,7 @@
                 <div class="col-lg-3 col-md-3">
 
                     <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                        <a href="?p=home"><img src="img/logo.png" alt=""></a>
                     </div>
                     
                 </div>

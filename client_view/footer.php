@@ -78,6 +78,13 @@
     </div>
     <!-- Search End -->
 
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.1/web-animations.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.3.1/smooth-scrollbar.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js'></script>
+    <script src="js/script.js"></script>
+
+
     <!-- Js Plugins -->
     <script src="js/AqibSlider.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
@@ -85,6 +92,10 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+
+
+
+
 </body>
 
 </html>

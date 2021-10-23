@@ -65,11 +65,13 @@
                                 <!-- <label for="title" class=""><h3>Title</h3></label> -->
                                 <select name="getCategory" id="getCategory" class="form-control">
                                     <option selected><?php if($draft['category'] != "") { echo $draft['category']; } else { echo "Category"; } ?></option>
-                                    <option value="Food Recipes">Food Recipes</option>
-                                    <option value="Fiction">Fiction</option>
-                                    <option value="Relationship">Relationship</option>
-                                    <option value="Travel">Travel</option>
-                                    <option value="Health & Beauty">Health & Beauty</option>
+                                    <option value="food_recipies">Food Recipes</option>
+                                    <option value="fiction">Fiction</option>
+                                    <option value="relationship">Relationship</option>
+                                    <option value="fashion">Fashiton</option>
+                                    <option value="travel">Travel</option>
+                                    <option value="career">Career</option>
+                                    <option value="health_n_beauty">Health & Beauty</option>
                                 </select>
                             </div>
                         </div>
@@ -265,7 +267,7 @@ if(isset($_POST['publishBlog'])){
 
 
 function post_blog($draft_id){
-    $link = mysqli_connect("localhost", "root", "", "blog_db");
+    $link = mysqli_connect("156.67.222.106", "u735106373_blog_project", "0204@Anujk", "u735106373_blog_project");
     date_default_timezone_set('Asia/Kolkata');
 
     $date = date("Y-m-d H:i:s");
@@ -287,7 +289,7 @@ function post_blog($draft_id){
 }
 
 function draftpost($session_id, $isPreview){
-    $link = mysqli_connect("localhost", "root", "", "blog_db");
+    $link = mysqli_connect("156.67.222.106", "u735106373_blog_project", "0204@Anujk", "u735106373_blog_project");
     date_default_timezone_set('Asia/Kolkata');
 
     $date = date("Y-m-d H:i:s");
@@ -349,16 +351,16 @@ function draftpost($session_id, $isPreview){
 
             mysqli_query($link, $update_postID);
 
-            // $i = 0;
+            $i = 0;
     
-            // while($i < count($tags)){
-            //     $tags_query = "INSERT INTO tags (`post_id`, `tags`)
-            //                 VALUES ('".mysqli_real_escape_string($link, $post_id)."',
-            //                             '". mysqli_real_escape_string($link, $tags[$i])."')";
+            while($i < count($tags)){
+                $tags_query = "INSERT INTO tags (`post_id`, `tags`)
+                            VALUES ('".mysqli_real_escape_string($link, $post_id)."',
+                                        '". mysqli_real_escape_string($link, $tags[$i])."')";
 
-            //     mysqli_query($link, $tags_query);
-            //     $i = $i+1;
-            // } 
+                mysqli_query($link, $tags_query);
+                $i = $i+1;
+            } 
 
             
 
