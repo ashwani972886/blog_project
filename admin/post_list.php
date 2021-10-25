@@ -50,7 +50,7 @@
      </div>
     </div>
     <div class="card mb-3">
-    <div><h2 class="text-danger">Draft</h2></div>
+    <div><h1 class="text-danger text-decoration-underline">Draft</h1></div>
 
        <img src="assets/images/logo-inverse.png"  alt="..." width="500" height="100">
        <div class="card-body">
