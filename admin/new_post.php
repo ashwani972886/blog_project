@@ -65,12 +65,12 @@
                                 <select name="getCategory" id="getCategory" class="form-control">
                                     <option selected><?php if($draft['category'] != "") { echo $draft['category']; } else { echo "Category"; } ?></option>
 
-                                    <option value="Food Recipes">Food Recipes</option>
-                                    <option value="Fiction">Fiction</option>
-                                    <option value="Relationship">Relationship</option>
-                                    <option value="Travel">Travel</option>
-                                    <option value="Health & Beauty">Health & Beauty</option>
-                                    <option value="Finance & Money">Finance & Money</option>
+                                    <option value="food_recipies">Food Recipes</option>
+                                    <option value="fiction">Fiction</option>
+                                    <option value="relationship">Relationship</option>
+                                    <option value="travel">Travel</option>
+                                    <option value="health_n_beauty">Health & Beauty</option>
+                                    <option value="finance_n_money">Finance & Money</option>
 
                                 </select>
                             </div>
