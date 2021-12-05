@@ -70,7 +70,10 @@
                                                 </ul>
                                                 <p><?php echo substr($posts['description'], 0, 200); ?> ...</p>
                                             </a>
-
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             
                                 <div class="categories__list__post__item">
                                     <div class="row inside-hov-img">
