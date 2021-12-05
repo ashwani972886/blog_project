@@ -21,7 +21,9 @@
     <meta name="keywords" content="MeeMineForever, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>MeeMineForever</title>
+    <title>Vision House</title>
+    <!--Title Logo-->
+    <link rel="icon" type="image/png" href="img/vh_logo_title1.png"/>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900&display=swap"
@@ -48,7 +50,7 @@
     <div class="humberger__menu__overlay"></div>
     <div class="humberger__menu__wrapper">
         <div class="humberger__menu__logo">
-            <a href="./index.html"><img src="img/humberger/humberger-logo.png" alt=""></a>
+            <a href="./index.html"><img src="img/logo_vh_inverse.png" alt="Vision House" style="width: 280px; height:auto;"></a>
         </div>
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
@@ -224,7 +226,7 @@
                 <div class="col-lg-3 col-md-3">
 
                     <div class="header__logo">
-                        <a href="?p=home"><img src="img/logo.png" alt=""></a>
+                        <a href="?p=home"><img src="img/logo_vh.png" alt="Vision House"></a>
                     </div>
                     
                 </div>

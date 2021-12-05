@@ -10,7 +10,7 @@
                             
                 <script>
 
-                    $("#new_post").click(function (){
+                    $(".new_post").click(function (){
                         $.ajax({
                             type: "POST",
                             url: "actions.php?action=save_new_draftId",

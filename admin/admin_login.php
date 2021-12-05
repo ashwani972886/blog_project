@@ -19,7 +19,7 @@
             <div class="col-md-7">
               <div class="card-body">
                 <div class="brand-wrapper">
-                  <img src="assets/images/logo.svg" alt="logo" class="logo">
+                  <img src="assets/images/Vh_logojpg.svg" alt="Vision House" class="logo">
                 </div>
                 <p class="login-card-description">Login Here</p>
                 <form method="dialog">

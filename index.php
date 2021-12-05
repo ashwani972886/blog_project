@@ -12,6 +12,8 @@
         include("client_view/category_list.php");
     } else if($page == "subCat"){
         include("client_view/sub_category_list.php");
+    } else if($page == "blogView"){
+        include("client_view/single_blog.php");
     } else if($page == "about"){
         include("client_view/about.php");
     } else if($page == "contact"){

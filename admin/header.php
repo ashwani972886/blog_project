@@ -7,12 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Admin - College-Connect</title>
+    <title>Admin - Vision House</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
     <meta name="msapplication-tap-highlight" content="no">
     
     <link href="./main.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/tagsinput.css">
 
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
@@ -119,7 +120,7 @@
                             <li class="app-sidebar__heading">NAVIGATION</li>
                             <li>
                                 
-                                <a href="" id="new_post">
+                                <a href="" class="new_post">
                                     <i class="fa fa-fw metismenu-icon" aria-hidden="true"></i>
                                     New Post
                                 </a>

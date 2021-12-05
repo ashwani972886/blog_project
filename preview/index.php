@@ -33,7 +33,7 @@
     <meta name="keywords" content="Foodeiblog, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Preview| <?php echo $row['title']; ?></title>
+    <title>Preview | <?php echo $row['title']; ?></title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900&display=swap"
@@ -55,9 +55,9 @@
     <div id="preloder">
         <div class="loader"></div>
     </div>
-    <form method="POST" enctype="multipart/form-data">
+    <!-- <form method="POST" enctype="multipart/form-data">
         <button class="btn btn-success" name="publishBlog" style="-moz-transform: rotate(90deg); -ms-transform:rotate(90deg); -o-transform:rotate(90deg);-webkit-transform:rotate(90deg); position: fixed; right:0%; top: 50%; margin:0; width: 200px;"><h3 style="color: white;">Publish Now!</h3></button>
-    </form>
+    </form> -->
     
     <!-- Humberger Begin -->
     <div class="humberger__menu__overlay"></div>
