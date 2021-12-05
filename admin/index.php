@@ -18,6 +18,10 @@
             
             include("post_list.php");
 
+        } else if($page == "cmnt_li"){
+        
+        include("comment_list.php");
+
         } else {
             include("dashboard.php");
         }
