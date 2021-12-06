@@ -20,7 +20,7 @@
                 <i class="icon-gradient bg-happy-itmeo fa fa-list-alt" aria-hidden="true"></i>
             </div> -->
             <div>
-               POST LISTS
+               POST LISTS Update
                 <div class="page-title-subheading">View all your blogs here</div>
             </div>
         </div>
