@@ -8,7 +8,7 @@
                             <div class="widget-subheading">Write more blogs in your profile</div>
                         </div>
                         <div class="widget-content-right">
-                            <div class="widget-numbers text-success">1896</div>
+                            <div class="widget-numbers text-success">10</div>
                         </div>
                     </div>
                 </div>
@@ -23,7 +23,7 @@
                             <div class="widget-subheading">Post and reach new milestone</div>
                         </div>
                         <div class="widget-content-right">
-                            <div class="widget-numbers text-danger">$3M</div>
+                            <div class="widget-numbers text-danger">2</div>
                         </div>
                     </div>
                 </div>
@@ -87,3 +87,13 @@
             </div>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-md-12">
+       
+            <div id="curve_chart" style="width: 1200px; height: 390px"></div>
+                
+        </div>
+    </div>
+
+    

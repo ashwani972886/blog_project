@@ -2,7 +2,7 @@
 <!doctype html>
 <html lang="en">
 
-<head>
+<>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Language" content="en">
@@ -15,16 +15,12 @@
     <link href="./main.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/tagsinput.css">
-
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 
-
-</head>
-
-
-
     <!--Title Logo-->
-    <link rel="shortcut icon" type="image/png" href="http://localhost/blog_project/images/logo_cc.png"/>
+    <link rel="shortcut icon" href="assets/images/vh_logo_title1.png">
+</head>
 
     <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
 
