@@ -100,6 +100,7 @@ function draftpost($session_id, $isPreview){
             
         } else if($isPreview == 1){
             echo "<script> window.open('http://localhost/blog_project/preview/?draft=".$draft_id."','_blank'); </script>";
+            echo "<script> window.location.assign('http://localhost/blog_project/admin/?p=new_post&draft=".$draft_id."'); </script>";
         } else {
             post_blog($_GET['draft']);
         }
@@ -138,6 +139,70 @@ function post_blog($draft_id){
             }
             
         }
+    }
+}
+
+function stringShorten($description, $id, $isDraft){
+    $str = strip_tags($description);
+        if(strlen($str) > 500){
+          $strCut = substr($str, 0, 500);
+          $strEnd = strrpos($strCut, ' ');
+          $str = $strEnd? substr($strCut, 0, $strEnd) : substr($strCut, 0);
+          if($isDraft ==1){
+            $str .= "...<a href='../preview/?draft=".$id."' target='_blank'>Read More</a>";
+          } else {
+            $str .= "...<a href='../?p=blogView&id=".$id."' target='_blank'>Read More</a>";
+          }
+          
+          return $str;
+        }
+}
+function get_timeago( $time ) {
+    date_default_timezone_set('Asia/Kolkata');
+    $estimate_time = time() - $time;
+
+    if( $estimate_time < 1 )
+    {
+        return 'less than 1 second ago';
+    }
+
+    $condition = array(
+                12 * 30 * 24 * 60 * 60  =>  'year',
+                30 * 24 * 60 * 60       =>  'month',
+                24 * 60 * 60            =>  'day',
+                60 * 60                 =>  'hour',
+                60                      =>  'minute',
+                1                       =>  'second'
+    );
+
+    foreach( $condition as $secs => $str )
+    {
+        $d = $estimate_time / $secs;
+
+        if( $d >= 1 )
+        {
+            $r = round( $d );
+            return $r . ' ' . $str . ( $r > 1 ? 's' : '' ) . ' ago';
+        }
+    }
+}
+
+function deleteData($id, $image, $isDraft){
+    $link = mysqli_connect("156.67.222.106", "u735106373_blog_project", "0204@Anujk", "u735106373_blog_project");
+    date_default_timezone_set('Asia/Kolkata');
+
+    if($isDraft == 1){
+        $query = "DELETE FROM `post_draft` WHERE id = '".$id."'";
+    } else {
+        $query = "DELETE FROM `posts` WHERE id = '".$id."'";
+    }
+    
+    if(mysqli_query($link, $query)) {
+        unlink("post_images/".$image);
+
+        echo "<script> alert('Deleted succesfully!'); </script>";
+
+        echo "<script> window.location.assign('http://localhost/blog_project/admin/?p=post_li'); </script>";
     }
 }
 

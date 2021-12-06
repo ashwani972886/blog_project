@@ -44,6 +44,36 @@
                                         $monthName = date('M', mktime(0, 0, 0, $month, 10));
                                 
                             ?>
+
+                            <div class="categories__list__post__item">
+                                <div class="row inside-hov-img">
+                                    <div class="col-lg-6 col-md-6">
+                                        <a href="?p=blogView&id=<?php echo $posts['id']; ?>">    
+                                            <div id="imgHov" style="border-radius: 15px !important; margin: 5px; transform: <?php if($count%2 == 0){echo "rotate(5deg)";} else { echo "rotate(-5deg)";} ?>; border:2px #F4952F solid " class="categories__post__item__pic set-bg "
+                                                data-setbg="admin/post_images/<?php echo $posts['title_img']; ?>">
+                                                <div class="post__meta">
+                                                    <h4><?php echo $day; ?></h4>
+                                                    <span><?php echo $monthName; ?></span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                        <div class="categories__post__item__text">
+                                            <a href="?p=blogView&id=<?php echo $posts['id']; ?>"> 
+                                                <!-- <span style="font-size: 40px ; " class="post__label">Apple</span> -->
+                                                <h3><a style="padding: 0px !important; margin: 10px 0px 10px 0px;" href="#"><?php echo $posts['title']; ?></a></h3>
+                                                <ul class="post__widget">
+                                                    <li>by <span><?php echo $posts['user_name']; ?></span></li>
+                                                    <li>3 min read</li>
+                                                    <li>20 Comment</li>
+                                                </ul>
+                                                <p><?php echo substr($posts['description'], 0, 200); ?> ...</p>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             
                                 <div class="categories__list__post__item">
                                     <div class="row inside-hov-img">
@@ -72,6 +102,7 @@
                                                     <p><?php echo substr($posts['description'], 0, 200); ?> ...</p>
                                                 </a>
                                             </div>
+
                                         </div>
                                         
                                     </div>
