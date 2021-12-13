@@ -1,5 +1,10 @@
 <?php
-
+    
+    $MAC = exec('getmac');
+    $MAC = strtok($MAC, ' ');
+    echo "<script> localStorage.setItem('MacAddress','".$MAC."'); </script>";
+    // echo "<script> console.log('".$MAC."'); </script>";
+    
     $query = "SELECT * FROM posts WHERE `id` = '".$_GET['id']."' ";
 
     $result = mysqli_query($link, $query);
@@ -16,7 +21,6 @@
     $monthName = date('M', mktime(0, 0, 0, $month, 10)); 
 
 ?>
-
 <!-- Single Post Section Begin -->
 <section class="single-post spad">
         <div>
@@ -40,6 +44,11 @@
                             <h4><?php echo $row['title']; ?></h4>
                             <ul class="widget">
                                 <li>by <?php echo $row['user_name'] ?></li>
+                                <li>
+                                    <a href="#" id="isLike" onclick="makeDislike()"><i class="fa fa-heart"></i></a>
+                                    <a href="#" id="isNotLike" onclick="makeLike()"><i class="fa fa-heart-o"></i></a>
+                                    <span id="likesCount"><?php echo $row['Likes']; ?></span>
+                                </li>
                                 <li>20 Comment</li>
                             </ul>
                         </div>
@@ -194,3 +203,78 @@
         </div>
     </section>
     <!-- Single Post Section End -->
+
+    <script>
+
+        // $("#isLike").hide();
+        // $("#isNotLike").show();
+        <?php 
+                $query = "SELECT * FROM like_stats WHERE post_id = '".$row['post_id']."' AND mac = '".$MAC."' LIMIT 1";
+                $result = mysqli_query($link, $query);
+                $check = mysqli_fetch_assoc($result);
+                if($check['likes'] == 0){
+        ?>
+                    
+                    $("#isLike").hide();
+                    $("#isNotLike").show();
+        <?php 
+                } else {
+        ?>
+                    $("#isLike").show();
+                    $("#isNotLike").hide();
+        <?php 
+                }
+        ?>
+
+        function view(){
+            $.ajax({
+                type: "POST",
+                url: "actions.php?action=viewPost",
+                data: "macAddress=" + "<?php echo $MAC; ?>" + "&post_id=" + "<?php echo $row['post_id']; ?>" + "&current_views=" + "<?php echo $row['Views']; ?>",
+                success: function(result1){
+                    if(result1 == 1){
+                        console.log("Page Viewed");
+                    } 
+                }
+            })
+        }
+
+        view();
+
+        function makeLike(){
+            $.ajax({
+                type: "POST",
+                url: "actions.php?action=makeLike",
+                data:  "post_id=" + "<?php echo $row['post_id'] ?>" 
+                            + "&macAddress=" + "<?php echo $MAC; ?>",
+                success: function(result) {
+                    
+                    $("#isLike").show();
+                    $("#isNotLike").hide();
+                    document.getElementById('likesCount').innerHTML = result;
+                    
+                }
+        
+            });
+        };
+
+        function makeDislike(){
+            $.ajax({
+                type: "POST",
+                url: "actions.php?action=makeDisLike",
+                data:  "post_id=" + "<?php echo $row['post_id'] ?>" 
+                            + "&macAddress=" + "<?php echo $MAC; ?>",
+                success: function(result) {
+                    
+                    $("#isLike").hide();
+                    $("#isNotLike").show();
+                    document.getElementById('likesCount').innerHTML = result;
+                    
+                }
+        
+            });
+        };
+
+        
+
+    </script>

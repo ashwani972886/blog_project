@@ -35,9 +35,13 @@
                         };
 
                         var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+                        
 
                         chart.draw(data, options);
                     }
+
+
+                    
                 </script>
                 
                 <!-- <script src="assets/scripts/new_post.js"></script> -->

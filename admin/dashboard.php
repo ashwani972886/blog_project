@@ -91,7 +91,7 @@
     <div class="row">
         <div class="col-md-12">
        
-            <div id="curve_chart" style="width: 1200px; height: 390px"></div>
+            <div id="curve_chart" style="height: 400px;"></div>
                 
         </div>
     </div>
