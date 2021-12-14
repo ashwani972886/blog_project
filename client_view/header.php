@@ -21,6 +21,8 @@
     <meta name="keywords" content="MeeMineForever, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="google-signin-client_id" content="147044111650-tmcp5dag4attru3tltameog29umjhka3.apps.googleusercontent.com">
     <title>Vision House</title>
     <!--Title Logo-->
     <link rel="icon" type="image/png" href="img/vh_logo_title1.png"/>
@@ -31,13 +33,14 @@
     <link href="https://fonts.googleapis.com/css?family=Unna:400,700&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="css/AqibSlider.css" type="text/css">
+    
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
     <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
     <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/AqibSlider.css" type="text/css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 

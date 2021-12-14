@@ -7,7 +7,7 @@
 
 ?>
 
-<div  style=" background-color: #F4952F;" class="bound-mng" >
+
 
 
     <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -21,73 +21,7 @@
 
     <div  class="page" data-modal-state="closed">
         <!-- below this line  -->
-        <div class="container bound-mng">
-            <div  class="card-slider">
-
-
-
-                <!--sec 1-->
-                <div class="card-wrapper text-right">
-                    <article style="border-radius: 30px !important; border: 5px solid black;"  class="card" id="card1">
-                        <picture class="card__background">
-                            <img  src="https://h.top4top.io/p_2090op8p41.jpeg">
-                        </picture>
-                        <h3 class="card__title">THE EVIL WITHIN</h3>
-                        <div class="card__duration text-right">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry
-                        </div>
-                    </article>
-                </div>
-
-                <!--sec 2-->
-                <div class="card-wrapper">
-                    <article style="border-radius: 30px !important; border: 5px solid black;"  class="card" id="card2">
-                        <picture class="card__background">
-                            <img src="https://i.top4top.io/p_2090wxca12.jpeg">
-                        </picture>
-                        <h3 class="card__title text-right">RESIDENT EVIL</h3>
-                        <div class="card__duration">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry</div>
-                    </article>
-                </div>
-
-                <!--sec 3-->
-                <div class="card-wrapper">
-                    <article style="border-radius: 30px !important; border: 5px solid black;"  class="card" id="card3">
-                        <picture class="card__background">
-                            <img src="https://j.top4top.io/p_20904bx7k3.jpeg">
-                        </picture>
-                        <h3 class="card__title">SILENT HILL</h3>
-                        <div class="card__duration">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry</div>
-                    </article>
-                </div>
-
-                <!--sec 4-->
-                <div class="card-wrapper">
-                    <article  style="border-radius: 30px !important; border: 5px solid black;" class="card" id="card4">
-                        <picture class="card__background">
-                            <img src="https://mrkzgulfup.com/uploads/16323540476191.jpeg">
-                        </picture>
-                        <h3 class="card__title">FATAL FRAME</h3>
-                        <div class="card__duration">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry </div>
-                    </article>
-                </div>
-
-                <!--sec 5-->
-                <div class="card-wrapper">
-                    <article  style="border-radius: 30px !important; border: 5px solid black;" class="card" id="card5">
-                        <picture class="card__background">
-                            <img src="https://l.top4top.io/p_20905ncw25.png">
-                        </picture>
-                        <h3 class="card__title">HAUNTING GROUND</h3>
-                        <div class="card__duration">
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry</div>
-                    </article>
-                </div>
-            </div>
-        </div>
+        
 
         <div class="overlay"></div>
         <div class="modal-wrapper">
