@@ -86,13 +86,39 @@
 
 
     <!-- Js Plugins -->
+
     <script src="js/AqibSlider.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    
 
+    <script>
+
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            
+            $.ajax({
+                type: "POST",
+                url: "actions.php?action=viewerSignIn",
+                data:  "user_name=" + profile.getName() + "&user_email=" + profile.getEmail(),
+                success: function(result) {
+                    // console.log(result);
+                    if(result == 1){
+                        window.location.reload('http://localhost/blog_project/?p=blogView&id=1#comments');
+                    }
+                    
+                }
+        
+            });
+        }
+
+    </script>
+
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>  
 
 
 
