@@ -56,28 +56,31 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="categories__item set-bg" data-setbg="img/categories/cat-1.jpg">
+                    <!-- <div class="categories__item set-bg" data-setbg="img/categories/cat-1.jpg"> -->
+                    <div class="categories__item set-bg" data-setbg="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">
 
                         <div class="categories__hover__text">
-                            <h5>Dinner</h5>
-                            <p>28 articles</p>
+                            <h5>TECHNOLOGY</h5>
+                            <!-- <p>28 articles</p> -->
                         </div>
 
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="categories__item set-bg" data-setbg="img/categories/cat-2.jpg">
+                    <!-- <div class="categories__item set-bg" data-setbg="img/categories/cat-2.jpg"> -->
+                    <div class="categories__item set-bg" data-setbg="https://media.istockphoto.com/photos/couple-pushing-trolley-with-their-child-at-airport-picture-id1325212877?b=1&k=20&m=1325212877&s=170667a&w=0&h=lEey74nmiKVFn2Nc0vVUNUhKysbTbiJnyMn3uv013uM=">
                         <div class="categories__hover__text">
-                            <h5>Dinner</h5>
-                            <p>28 articles</p>
+                            <h5>TRAVEL</h5>
+                            <!-- <p>28 articles</p> -->
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="categories__item set-bg" data-setbg="img/categories/cat-3.jpg">
+                    <!-- <div class="categories__item set-bg" data-setbg="img/categories/cat-3.jpg"> -->
+                    <div class="categories__item set-bg" data-setbg="https://images.unsplash.com/photo-1605289355680-75fb41239154?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZmFzaGlvbiUyMHNob3d8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
                         <div class="categories__hover__text">
-                            <h5>Dinner</h5>
-                            <p>28 articles</p>
+                            <h5>FASHION</h5>
+                            <!-- <p>28 articles</p> -->
                         </div>
                     </div>
                 </div>
@@ -85,7 +88,7 @@
                     <div class="categories__item set-bg" data-setbg="img/categories/cat-4.jpg">
                         <div class="categories__hover__text">
                             <h5>Dinner</h5>
-                            <p>28 articles</p>
+                            <!-- <p>28 articles</p> -->
                         </div>
                     </div>
                 </div>
