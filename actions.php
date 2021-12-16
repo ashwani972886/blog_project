@@ -91,7 +91,7 @@
         $result_check = mysqli_query($link, $query_check);
         if(mysqli_num_rows($result_check) > 0){
             $check = mysqli_fetch_assoc($result_check);
-            $_SESSION['userId'] = $check['id'];
+            $_SESSION['userId'] = $check['viewer_id'];
             echo 1;
         } else {
             $query = "INSERT INTO viewer_users ( `name`, `email`)
@@ -108,6 +108,28 @@
 
 
     }
+
+
+    if($_GET['action'] == "sendComment"){
+
+        // echo $_POST['post_id']." ".$_POST['name']." ".$_POST['email']." ".$_POST['comment'];
+
+        $date = date("Y-m-d H:i:s");
+
+        $query = "INSERT INTO comments(`post_id`, `name`, `email`, `comment`, `time`) 
+                    VALUES('".mysqli_real_escape_string($link,$_POST['post_id'])."',
+                            '".mysqli_real_escape_string($link,$_POST['name'])."',
+                            '".mysqli_real_escape_string($link,$_POST['email'])."',
+                            '".mysqli_real_escape_string($link,$_POST['comment'])."',
+                            '".mysqli_real_escape_string($link,$date)."') ";
+
+            if(mysqli_query($link,$query)){
+                // header("Location: http://localhost/blog_project/?p=blogView&id=1");
+                echo 1;
+            }
+
+    }
+    
 
 ?>
 

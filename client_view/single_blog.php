@@ -225,16 +225,16 @@
                                     if($user_session_id){
                                 ?>
                                         <div>
-                                            <form method="POST" enctype="multipart/form-data">
+                                            
                                                 <div class="row">
                                                     <div class="col-md-11" style="margin-right: 0; padding: 0px;">
-                                                        <input type="text" name="comment" class="form-control">
+                                                        <input type="text"  id="post_comment" class="form-control">
                                                     </div>
                                                     <div class="col-md-1" style="margin-left: 0; ">
-                                                        <button name="sendComment" class="btn" style="padding: 0px;"><i class="fa fa-paper-plane" style="font-size: 30px;"></i></button>
+                                                        <button  onclick="sendComment()" class="btn" style="padding: 0px;"><i class="fa fa-paper-plane" style="font-size: 30px;"></i></button>
                                                     </div>
                                                 </div>
-                                            </form>
+                                            
                                         </div>
                                 <?php 
                                     } else {
@@ -287,33 +287,15 @@
                     
                 </form> -->
             </div>
-            <div class="modal-footer">
+            <!-- <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             <button type="button" id="regViewer" class="btn btn-primary" onclick="viewerSign()" >Sign In</button>
-            </div>
+            </div> -->
         </div>
         </div>
     </div>
 
-    <?php
     
-    if(isset($_POST['sendComment'])){
-
-        $date = date("Y-m-d H:i:s");
-
-        $query = "INSERT INTO comments(`post_id`, `name`, `email`, `comment`, `time`) 
-                    VALUES('".mysqli_real_escape_string($link,$_GET['id'])."',
-                            '".mysqli_real_escape_string($link,$userData['name'])."',
-                            '".mysqli_real_escape_string($link,$userData['email'])."',
-                            '".mysqli_real_escape_string($link,$_POST['comment'])."',
-                            '".mysqli_real_escape_string($link,$date)."') ";
-
-            if(mysqli_query($link,$query)){
-                echo "<script> window.location.assign('http://localhost/blog_project/?p=blogView&id=1#comments'); </script>";
-            }
-    }
-    
-    ?>
 
     <script>
         // console.log(<?php echo $user_session_id; ?>);
@@ -355,7 +337,7 @@
                         console.log("Page Viewed");
                     } 
                 }
-            })
+            });
         }
 
         function makeLike(){
@@ -392,30 +374,52 @@
             });
         };
 
-        function viewerSign(){
-            if($("#nameViewer").val() == ""){
-                alert("Please Enter your name");
-            } else if($("#emailViewer").val() == ""){
-                alert("Please Enter your email");
-            } else {
-                $.ajax({
-                    type: "POST",
-                    url: "actions.php?action=viewerSignIn",
-                    data:  "user_name=" + $("#nameViewer").val() + "&user_email=" + $("#emailViewer").val(),
-                    success: function(result) {
-                        console.log(result);
-                        // if(result == 1){
-                            // window.location.reload('http://localhost/blog_project/?p=blogView&id=1#comments');
-                        // } else {
-                        //     alert("Hello!");
-                        // }
-                        
+        function sendComment(){
+            $.ajax({
+                type: "POST",
+                url: "actions.php?action=sendComment",
+                data:  "post_id=" + "<?php echo $_GET['id']; ?>" + "&name=" + "<?php echo $userData['name']; ?>"
+                            + "&email=" + "<?php echo $userData['email']; ?>" + "&comment=" + $("#post_comment").val(),
+                success: function(result) {
+                 
+                    if(result ==1){
+                        window.location.reload('http://localhost/blog_project/?p=blogView&id='+<?php echo $_GET['id']; ?>+'#comments');
+                    } else{
+                        alert("Not posted! Please try again!");
                     }
+                    
+                    
+                    
+                }
+        
+            });
+        };
+
+
+        // function viewerSign(){
+        //     if($("#nameViewer").val() == ""){
+        //         alert("Please Enter your name");
+        //     } else if($("#emailViewer").val() == ""){
+        //         alert("Please Enter your email");
+        //     } else {
+        //         $.ajax({
+        //             type: "POST",
+        //             url: "actions.php?action=viewerSignIn",
+        //             data:  "user_name=" + $("#nameViewer").val() + "&user_email=" + $("#emailViewer").val(),
+        //             success: function(result) {
+        //                 console.log(result);
+        //                 // if(result == 1){
+        //                     // window.location.reload('http://localhost/blog_project/?p=blogView&id=1#comments');
+        //                 // } else {
+        //                 //     alert("Hello!");
+        //                 // }
+                        
+        //             }
             
-                });
-            }
+        //         });
+        //     }
             
-        }
+        // }
         
 
     </script>
