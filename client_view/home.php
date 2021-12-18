@@ -10,31 +10,31 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="img/about_caraousel.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
+                    <img src="img/caraousel-1.png" class="d-block w-100" alt="..." height="700px">
+                    <!-- <div class="carousel-caption d-none d-md-block">
                         <h5>First slide label</h5>
                         <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </div> -->
+                </div>
+                <div class="carousel-item">
+                    <img src="img/caraousel-2.png" class="d-block w-100" alt="..." height="700px">
+                    <div class="carousel-caption d-none d-md-block">
+                        <!-- <h5>Second slide label</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/about_caraousel.jpg" class="d-block w-100" alt="...">
+                    <img src="img/caraousel-3.png" class="d-block w-100" alt="..." height="700px">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <!-- <h5>Third slide label</h5>
+                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> -->
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="img/about_caraousel.jpg" class="d-block w-100" alt="...">
+                    <img src="img/caraousel-4.png" class="d-block w-100" alt="..." height="700px">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="img/about_caraousel.jpg" class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Fourth slide label</h5>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <!-- <h5>Fourth slide label</h5>
+                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p> -->
                     </div>
                 </div>
             </div>
@@ -60,7 +60,7 @@
                     <div class="categories__item set-bg" data-setbg="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">
 
                         <div class="categories__hover__text">
-                            <h5>TECHNOLOGY</h5>
+                            <h5 style="font-family: 'Mea Culpa', cursive;">Technology</h5>
                             <!-- <p>28 articles</p> -->
                         </div>
 
@@ -70,7 +70,7 @@
                     <!-- <div class="categories__item set-bg" data-setbg="img/categories/cat-2.jpg"> -->
                     <div class="categories__item set-bg" data-setbg="https://media.istockphoto.com/photos/couple-pushing-trolley-with-their-child-at-airport-picture-id1325212877?b=1&k=20&m=1325212877&s=170667a&w=0&h=lEey74nmiKVFn2Nc0vVUNUhKysbTbiJnyMn3uv013uM=">
                         <div class="categories__hover__text">
-                            <h5>TRAVEL</h5>
+                            <h5 style="font-family: 'Mea Culpa', cursive;">Travel</h5>
                             <!-- <p>28 articles</p> -->
                         </div>
                     </div>
@@ -79,7 +79,7 @@
                     <!-- <div class="categories__item set-bg" data-setbg="img/categories/cat-3.jpg"> -->
                     <div class="categories__item set-bg" data-setbg="https://images.unsplash.com/photo-1605289355680-75fb41239154?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZmFzaGlvbiUyMHNob3d8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60">
                         <div class="categories__hover__text">
-                            <h5>FASHION</h5>
+                            <h5 style="font-family: 'Mea Culpa', cursive;">Fashion</h5>
                             <!-- <p>28 articles</p> -->
                         </div>
                     </div>
@@ -87,7 +87,7 @@
                 <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="categories__item set-bg" data-setbg="img/categories/cat-4.jpg">
                         <div class="categories__hover__text">
-                            <h5>Dinner</h5>
+                            <h5 style="font-family: 'Mea Culpa', cursive;">Dinner</h5>
                             <!-- <p>28 articles</p> -->
                         </div>
                     </div>

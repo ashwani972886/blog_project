@@ -69,8 +69,10 @@ p {
     overflow: hidden;
     position: relative;
     z-index: 1;
-    height: 350px;
     box-shadow: 0 30px 50px -25px rgba(0, 0, 0, 0.25);
+}
+.card-custom{
+    height: 350px;
 }
 
 .card>* {

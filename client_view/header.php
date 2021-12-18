@@ -56,21 +56,19 @@
     <div class="humberger__menu__overlay"></div>
     <div class="humberger__menu__wrapper">
         <div class="humberger__menu__logo">
-            <a href="./index.html"><img src="img/logo_vh_inverse.png" alt="Vision House" style="width: 280px; height:auto;"></a>
+            <a href="?p=home"><img src="img/logo_vh_inverse.png" alt="Vision House" style="width: 280px; height:auto;"></a>
         </div>
         <nav class="humberger__menu__nav mobile-menu">
             <ul>
-                <li><a href="./index.html">Home</a></li>
+                <li><a href="?p=home">Home</a></li>
 
-                <li><a href="#">food recipes</a></li>
-                <li><a href="#">fiction</a></li>
-                <li><a href="#">relationship</a></li>
-                <li><a href="#">fashion</a></li>
-                <li><a href="#">travel</a></li>
-                <li><a href="#">career</a></li>
-                <li><a href="#">health &beauty</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="?p=cat_li&cat=food_recipies">food recipes</a></li>
+                <li><a href="?p=cat_li&cat=fiction">Fiction</a></li>
+                <li><a href="?p=cat_li&cat=relationship">Relationship</a></li>
+                <li><a href="?p=cat_li&cat=fashion">Fashion</a></li>
+                <li><a href="?p=cat_li&cat=travel">Travel</a></li>
+                <li><a href="?p=cat_li&cat=career">Career</a></li>
+                <li><a href="?p=cat_li&cat=health_n_beauty">Health & Beauty</a></li>
             </ul>
         </nav>
         <div id="mobile-menu-wrap"></div>

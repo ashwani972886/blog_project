@@ -31,7 +31,7 @@
         <!-- Top Header -->
         <div class="app-header header-shadow">
             <div class="app-header__logo">
-                <div class="logo-src"></div>
+                <a href="?p=home"><div class="logo-src"></div></a>
                 <!-- <div class=""><h4 style="font-weight: bold; color: #60CCFF;">College-Connect</h4></div> -->
                 <div class="header__pane ml-auto">
                     <div>

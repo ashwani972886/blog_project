@@ -20,7 +20,7 @@
             
     $monthName = date('M', mktime(0, 0, 0, $month, 10));
 
-    $query_comment = "SELECT * FROM comments WHERE post_id = '".$_GET['id']."' ORDER BY id desc";
+    $query_comment = "SELECT * FROM comments WHERE post_id = '".$row['post_id']."' ORDER BY id desc";
     $result_comment = mysqli_query($link, $query_comment);
     
     if($user_session_id){
@@ -127,131 +127,108 @@
                         if($row['profile_s'] == "1"){
 
                     ?>
-                        <div class="single-post__author__profile">
-                            <div class="single-post__author__profile__pic">
-                                <img src="../img/categories/single-post/author-profile.jpg" alt="">
-                            </div>
-                            <div class="single-post__author__profile__text">
-                                <h4>Lena Mollein.</h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                <div class="single-post__author__profile__social">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <div class="single-post__author__profile">
+                                <div class="single-post__author__profile__pic">
+                                    <img src="../img/categories/single-post/author-profile.jpg" alt="">
+                                </div>
+                                <div class="single-post__author__profile__text">
+                                    <h4>Lena Mollein.</h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                    <div class="single-post__author__profile__social">
+                                        <a href="#"><i class="fa fa-facebook"></i></a>
+                                        <a href="#"><i class="fa fa-twitter"></i></a>
+                                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                                        <a href="#"><i class="fa fa-instagram"></i></a>
+                                        <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    <?php 
+                    
+                        
+                            <?php 
 
-                        }
+                                }
 
-                        if($row['comment_s'] == "1"){
-                                                
-                    ?>
-
-                        <div class="single-post__comment" id="comments">
-                            <div class="widget__title">
-                                <h4><?php echo mysqli_num_rows($result_comment); ?> Comment</h4>
-                            </div>
-                            <?php
-                                if(mysqli_num_rows($result_comment) > 0){
-                                    while($comments = mysqli_fetch_assoc($result_comment)){
-                                        
-                                        $splitDateTime = explode(" ",$comments['time']);
-                                        $date = $splitDateTime[0];
-                                        $splitDate = explode("-",$date);
-
-                                        $year = $splitDate[0];
-                                        $month = $splitDate[1];
-                                        $day = $splitDate[2];
-                                        $monthName = date('M', mktime(0, 0, 0, $month, 10));
+                                if($row['comment_s'] == "1"){
+                                                        
                             ?>
-                                        <div class="single-post__comment__item">
-                                            <div class="single-post__comment__item__text">
-                                                <h5><?php echo $comments['name']; ?></h5>
-                                                <span><?php echo $day.' '.$monthName.' '.$year; ?></span>
-                                                <p><?php echo $comments['comment']; ?></p>
-                                                <ul>
-                                                    <li><a href="#"><i class="fa fa-heart-o"></i></a></li>
-                                                    <li><a href="#"><i class="fa fa-share-square-o"></i></a></li>
-                                                </ul>
+
+                            <div class="single-post__comment" id="comments">
+                                <div class="widget__title">
+                                    <h4><?php echo mysqli_num_rows($result_comment); ?> Comment</h4>
+                                </div>
+                                
+                                <div style="border: 1px solid gray; border-radius: 10px; padding:25px; ">
+                                    <div style="border-bottom: 1px solid black; overflow-y: scroll; height: 300px;">
+                            <?php
+                                    if(mysqli_num_rows($result_comment) > 0){
+                                        while($comments = mysqli_fetch_assoc($result_comment)){
+                                            
+                                            $splitDateTime = explode(" ",$comments['time']);
+                                            $date = $splitDateTime[0];
+                                            $splitDate = explode("-",$date);
+
+                                            $year = $splitDate[0];
+                                            $month = $splitDate[1];
+                                            $day = $splitDate[2];
+                                            $monthName = date('M', mktime(0, 0, 0, $month, 10));
+                            ?>
+                                            <div class="single-post__comment__item card" style="background-color: rgb(206, 205, 205)">
+                                                <div class="single-post__comment__item__text ">
+                                                    <h4><b><?php echo $comments['name']; ?></b></h4>
+                                                    <span><?php echo $day.' '.$monthName.' '.$year; ?></span>
+                                                    <p><?php echo $comments['comment']; ?></p>
+                                                    <ul>
+                                                        <!-- <li><a href="#"><i class="fa fa-heart-o"></i></a></li>
+                                                        <li><a href="#"><i class="fa fa-share-square-o"></i></a></li> -->
+                                                    </ul>
+                                                </div>
                                             </div>
-                                        </div>
                             <?php
 
                                     }
                                 }
                             ?>
-                            <div class="single-post__comment__item single-post__comment__item--reply">
-                            <div class="single-post__comment__item__pic">
-                                    <img src="../img/categories/single-post/comment/comment-2.jpg" alt="">
+                            
                                 </div>
-                                <div class="single-post__comment__item__text">
-                                    <h5>Brandon Kelley</h5>
-                                    <span>15 Aug 2017</span>
-                                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-                                        adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
-                                        magnam.</p>
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-heart-o"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-share-square-o"></i></a></li>
-                                    </ul>
-                                </div>
-                                
-                            </div>
-                            <div class="single-post__comment__item">
-                                <div class="single-post__comment__item__pic">
-                                    <img src="../img/categories/single-post/comment/comment-3.jpg" alt="">
-                                </div>
-                                <div class="single-post__comment__item__text">
-                                    <h5>Brandon Kelley</h5>
-                                    <span>15 Aug 2017</span>
-                                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-                                        adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
-                                        magnam.</p>
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-heart-o"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-share-square-o"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div>
+                            
+                            
+                                <div>
 
                                 <?php 
                                     if($user_session_id){
                                 ?>
-                                        <div>
+                                        <hr>
+                                        <div style=" margin-top: 10px;">
                                             
-                                                <div class="row">
-                                                    <div class="col-md-11" style="margin-right: 0; padding: 0px;">
-                                                        <input type="text"  id="post_comment" class="form-control">
-                                                    </div>
-                                                    <div class="col-md-1" style="margin-left: 0; ">
-                                                        <button  onclick="sendComment()" class="btn" style="padding: 0px;"><i class="fa fa-paper-plane" style="font-size: 30px;"></i></button>
-                                                    </div>
+                                            <div class="row" style="margin-left:5px;">
+                                                <div class="col-md-11" style="margin-right: 0; padding: 0px;">
+                                                    <input type="text"  id="post_comment" class="form-control">
                                                 </div>
+                                                <div class="col-md-1" style="margin-left: 0; ">
+                                                    <button  onclick="sendComment()" class="btn" style="padding: 0px;"><i class="fa fa-paper-plane" style="font-size: 30px;"></i></button>
+                                                </div>
+                                            </div>
                                             
-                                        </div>
+                                </div>
                                 <?php 
                                     } else {
                                 ?>
-                                        <div style="background-color: lemonchiffon;">
+                                        <div style="background-color: lemonchiffon; margin-top: 10px;">
                                             <p class="text-center" style="font-size: 20px;">
                                                 To comment, Please <a href="" data-toggle="modal" data-target="#signIn">Sign In</a>!
                                             </p>
                                         </div>
-                                <?php
-                                    }
-                                    // echo $userData['name'];
-                                ?>
+                                    <?php
+                                        }
+                                    ?>
 
-                                
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        
 
                     <?php
                         }
@@ -275,22 +252,9 @@
             </div>
             <div class="modal-body">
                 <div class="g-signin2" data-onsuccess="onSignIn"></div>
-                <!-- <form method="dialog">
-                    <div>
-                        <label for="Name">Name</label>
-                        <input type="text" class="form-control" id="nameViewer">
-                    </div>
-                    <div>
-                        <label for="Email">Email</label>
-                        <input type="email" class="form-control" id="emailViewer">
-                    </div>
-                    
-                </form> -->
+                
             </div>
-            <!-- <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" id="regViewer" class="btn btn-primary" onclick="viewerSign()" >Sign In</button>
-            </div> -->
+            
         </div>
         </div>
     </div>
@@ -298,15 +262,13 @@
     
 
     <script>
-        // console.log(<?php echo $user_session_id; ?>);
-        // $("#isLike").hide();
-        // $("#isNotLike").show();
+        
         <?php 
-                $query = "SELECT * FROM like_stats WHERE post_id = '".$row['post_id']."' AND mac = '".$MAC."' LIMIT 1";
-                $result = mysqli_query($link, $query);
-                if(mysqli_num_rows($result) > 0){
-                    $check = mysqli_fetch_assoc($result);
-                    if($check['likes'] == 0){
+            $query = "SELECT * FROM like_stats WHERE post_id = '".$row['post_id']."' AND mac = '".$MAC."' LIMIT 1";
+            $result = mysqli_query($link, $query);
+            if(mysqli_num_rows($result) > 0){
+                $check = mysqli_fetch_assoc($result);
+                if($check['likes'] == 0){
                 
         ?>  
                     $("#isLike").hide();
@@ -374,52 +336,40 @@
             });
         };
 
-        function sendComment(){
-            $.ajax({
-                type: "POST",
-                url: "actions.php?action=sendComment",
-                data:  "post_id=" + "<?php echo $_GET['id']; ?>" + "&name=" + "<?php echo $userData['name']; ?>"
-                            + "&email=" + "<?php echo $userData['email']; ?>" + "&comment=" + $("#post_comment").val(),
-                success: function(result) {
-                 
-                    if(result ==1){
-                        window.location.reload('http://localhost/blog_project/?p=blogView&id='+<?php echo $_GET['id']; ?>+'#comments');
-                    } else{
-                        alert("Not posted! Please try again!");
-                    }
-                    
-                    
-                    
-                }
+        <?php 
         
-            });
-        };
+            if($user_session_id){
+        ?>
 
-
-        // function viewerSign(){
-        //     if($("#nameViewer").val() == ""){
-        //         alert("Please Enter your name");
-        //     } else if($("#emailViewer").val() == ""){
-        //         alert("Please Enter your email");
-        //     } else {
-        //         $.ajax({
-        //             type: "POST",
-        //             url: "actions.php?action=viewerSignIn",
-        //             data:  "user_name=" + $("#nameViewer").val() + "&user_email=" + $("#emailViewer").val(),
-        //             success: function(result) {
-        //                 console.log(result);
-        //                 // if(result == 1){
-        //                     // window.location.reload('http://localhost/blog_project/?p=blogView&id=1#comments');
-        //                 // } else {
-        //                 //     alert("Hello!");
-        //                 // }
+                function sendComment(){
+                    $.ajax({
+                        type: "POST",
+                        url: "actions.php?action=sendComment",
+                        data:  "post_id=" + "<?php echo $row['post_id']; ?>" + "&name=" + "<?php echo $userData['name']; ?>"
+                                    + "&email=" + "<?php echo $userData['email']; ?>" + "&comment=" + $("#post_comment").val(),
+                        success: function(result) {
                         
-        //             }
-            
-        //         });
-        //     }
-            
-        // }
+                            if(result ==1){
+                                window.location.reload('http://localhost/blog_project/?p=blogView&id='+<?php echo $_GET['id']; ?>+'#comments');
+                            } else{
+                                alert("Not posted! Please try again!");
+                                // alert(result);
+                            }
+                            
+                            
+                            
+                        }
+                
+                    });
+                };
+        
+
+        <?php 
+            }
+
+        ?>
+        
+
         
 
     </script>

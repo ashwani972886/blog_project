@@ -114,7 +114,7 @@
 
         // echo $_POST['post_id']." ".$_POST['name']." ".$_POST['email']." ".$_POST['comment'];
 
-        $date = date("Y-m-d H:i:s");
+        $date = date("Y-m-d H:i:s");        
 
         $query = "INSERT INTO comments(`post_id`, `name`, `email`, `comment`, `time`) 
                     VALUES('".mysqli_real_escape_string($link,$_POST['post_id'])."',
@@ -124,8 +124,16 @@
                             '".mysqli_real_escape_string($link,$date)."') ";
 
             if(mysqli_query($link,$query)){
-                // header("Location: http://localhost/blog_project/?p=blogView&id=1");
-                echo 1;
+                
+                $getCommentVal = "SELECT * FROM posts WHERE `post_id` = '".$_POST['post_id']."' LIMIT 1";
+                $result_getCommentVal = mysqli_query($link, $getCommentVal);
+                $commentVal = mysqli_fetch_assoc($result_getCommentVal);
+                $commentVal = $commentVal['Comments'] + 1;
+                $update_commentVal = "UPDATE posts SET Comments = $commentVal WHERE post_id = '".$_POST['post_id']."' LIMIT 1";
+                if (mysqli_query($link, $update_commentVal)){
+                    echo 1;
+                }
+
             }
 
     }

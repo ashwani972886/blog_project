@@ -2272,7 +2272,7 @@ ol {
 }
 
 .single-post__comment__item__text h5 {
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	margin-bottom: 4px;
 }
 
@@ -2280,11 +2280,14 @@ ol {
 	font-size: 12px;
 	color: #888888;
 	display: block;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
+	margin-left: 2px;
 }
 
 .single-post__comment__item__text p {
 	font-size: 15px;
+	margin-left:10px;
+	font-weight: 600;
 }
 
 .single-post__comment__item__text ul {

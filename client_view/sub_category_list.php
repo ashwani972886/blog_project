@@ -62,11 +62,11 @@
                                         <div class="categories__post__item__text">
                                             <a href="?p=blogView&id=<?php echo $posts['id']; ?>"> 
                                                 <!-- <span style="font-size: 40px ; " class="post__label">Apple</span> -->
-                                                <h3><a style="padding: 0px !important; margin: 10px 0px 10px 0px;" href="#"><?php echo $posts['title']; ?></a></h3>
+                                                <h3><a style="padding: 0px !important; margin: 10px 0px 10px 0px;" href="?p=blogView&id=<?php echo $posts['id']; ?>"><?php echo $posts['title']; ?></a></h3>
                                                 <ul class="post__widget">
                                                     <li>by <span><?php echo $posts['user_name']; ?></span></li>
-                                                    <li>3 min read</li>
-                                                    <li>20 Comment</li>
+                                                    <!-- <li>3 min read</li> -->
+                                                    <li><?php echo $posts['Comments']; ?> Comment</li>
                                                 </ul>
                                                 <p><?php echo substr($posts['description'], 0, 200); ?> ...</p>
                                             </a>

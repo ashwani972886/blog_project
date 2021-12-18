@@ -20,7 +20,7 @@
             <div class="col-md-7">
               <div class="card-body">
                 <div class="brand-wrapper">
-                  <img src="assets/images/logo.png" alt="Vision House" class="logo">
+                  <a href="../?p=home"><img src="assets/images/logo.png" alt="Vision House" class="logo"></a>
                 </div>
                 <p class="login-card-description">Login Here</p>
                 <form method="dialog">
@@ -62,7 +62,8 @@
             <div class="col-md-7">
               <div class="card-body">
                 <div class="brand-wrapper">
-                  <img src="assets/images/logo.svg" alt="logo" class="logo">
+                  <!-- <img src="assets/images/logo.svg" alt="logo" class="logo"> -->
+                  <a href="../?p=home"><img src="assets/images/logo.png" alt="Vision House" class="logo"></a>
                 </div>
                 <p class="login-card-description">Sign Up Your Account</p>
                 <form method="dialog">

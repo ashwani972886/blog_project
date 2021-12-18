@@ -86,7 +86,7 @@
 
                                             <a href="?p=subCat&cat_val=<?php echo $category ?>&sub_cat_val=<?php echo $sub_categories['sub_category']?>">
                                                 <div class="col-lg-4 col-md-4 hov-img" style="width: 100%;">
-                                                    <div id="imgHov" style="border-radius: 15px !important; margin: 5px; margin-bottom: 20px !important; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/cl-1.jpg">
+                                                    <div id="imgHov" style="border-radius: 15px !important; margin: 5px; margin-bottom: 20px !important; border:2px #F4952F solid " class="categories__post__item__pic set-bg"  data-setbg="img/categories/categories-list/<?php echo $sub_categories['sub_category']; ?>.png">
                                                     </div>
                                                     <div class="categories__post__item__text text-center">
                                                         <span style="font-size: 30px ; " class="post__label"><?php echo ucfirst($sub_categories['sub_category']); ?></span>
