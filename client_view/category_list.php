@@ -107,17 +107,24 @@
                         </div>
                         
 
+<?php 
+                    if(mysqli_num_rows($result) > 3){
 
+?>
                         <div class="col">
                             <div class="col-lg-12">
                                 <div class="categories__pagination">
                                     <a href="#">1</a>
-                                    <a href="#">2</a>
-                                    <a href="#">3</a>
+                                    <!-- <a href="#">2</a>
+                                    <a href="#">3</a> -->
                                     <a href="#">Next</a>
                                 </div>
                             </div>
                         </div>
+<?php
+                    }
+?>
+
                     </div>
                     </div>
 

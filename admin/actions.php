@@ -105,14 +105,17 @@
                 }
                 
             }
-
-    
-        
-
-        
-
     
     }
     
+    if($_GET['action'] == "commentDetail"){
+    
+        $query_comment = "SELECT * FROM comments WHERE post_id = '".mysqli_real_escape_string($link, $_POST['post_id'])."' ORDER BY id DESC";
+        $result_comment = mysqli_query($link, $query_comment);
 
+        $row = mysqli_fetch_assoc($result_comment);
+        echo json_encode($row);       
+        
+    
+    }
 ?>

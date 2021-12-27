@@ -45,9 +45,7 @@
                         <div class="footer__logo">
                             <a href="?p=home"><img src="img/logo_vh.png" alt="Vision House"></a>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                            ut<br /> labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus
-                            commodo viverra<br /> maecenas accumsan lacus vel facilisis. </p>
+                        <p>We at <b>Vision House</b> make sure that whoever visits here either reader or blogger do not get bored. We also make sure that everyone get sufficient content to read of their choice. And the one who wants to blog gets an easy to use interface to write and view stats for their content. Also it will bring more zeal and enthusiasm for one to write.
                         <div class="footer__social">
                             <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>

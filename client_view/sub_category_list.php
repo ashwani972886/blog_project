@@ -26,11 +26,11 @@
                             <?php
                                 $query = "SELECT * FROM posts WHERE `sub_category` = '".$sub_category_val."' ";
 
-                                $result = mysqli_query($link, $query);
-                                if(mysqli_num_rows($result)>0){
+                                $result_sub = mysqli_query($link, $query);
+                                if(mysqli_num_rows($result_sub)>0){
     
                                     $count = 0;
-                                    while( $posts = mysqli_fetch_assoc($result) ){
+                                    while( $posts = mysqli_fetch_assoc($result_sub) ){
                                         $count++;
 
                                         $splitDateTime = explode(" ",$posts['date_time']);
@@ -114,16 +114,19 @@
                             
                             ?>
 
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div class="col-lg-12">
-                                    <div class="categories__pagination">
-                                        <a href="#">1</a>
-                                        <a href="#">2</a>
-                                        <a href="#">3</a>
-                                        <a href="#">Next</a>
-                                    </div>
+                                  
+                                        <div class="categories__pagination">
+                                            <a href="#">1</a>
+                                            <a href="#">2</a>
+                                            <a href="#">3</a>
+                                            <a href="#">Next</a>
+                                        </div>
+                                
                                 </div>
-                            </div>
+                            </div> -->
+                            
                         </div>
                         <div class="col-lg-4 col-md-4">
                             <div class="sidebar__item">
@@ -149,7 +152,7 @@
                                         <a href="#"><i class="fa fa-envelope-o"></i></a>
                                     </div>
                                 </div>
-                                <div class="sidebar__feature__item">
+                                <!-- <div class="sidebar__feature__item">
                                     <div class="sidebar__item__title">
                                         <h6 style="font-size: large;"><b>Feature Posts</b> </h6>
                                     </div>
@@ -204,11 +207,9 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="sidebar__item__banner">
-                                    <img src="img/sidebar/banner.jpg" alt="">
-                                </div>
-                                <div class="sidebar__item__categories">
+                                </div> -->
+                                <!--   -->
+                                <!-- <div class="sidebar__item__categories">
                                     <div class="sidebar__item__title">
                                         <h6>Categories</h6>
                                     </div>
@@ -222,22 +223,8 @@
                                         <li><a href="#">Vegan <span>63</span></a></li>
                                         <li><a href="#">Weightloss <span>27</span></a></li>
                                     </ul>
-                                </div>
-                                <div class="sidebar__subscribe__item">
-                                    <div class="sidebar__item__title">
-                                        <h6>Subscribe</h6>
-                                    </div>
-                                    <p>Subscribe to our newsletter and get our newest updates right on your inbox.</p>
-                                    <form action="#">
-                                        <input type="text" class="email-input" placeholder="Your email">
-                                        <label for="s-agree-check">
-                                            I agree to the terms & conditions
-                                            <input type="checkbox" id="s-agree-check">
-                                            <span class="checkmark"></span>
-                                        </label>
-                                        <button type="submit" class="site-btn">Subscribe</button>
-                                    </form>
-                                </div>
+                                </div> -->
+                                
                             </div>
                         </div>
                     </div>
