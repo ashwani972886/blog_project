@@ -122,7 +122,7 @@
                 + "&mobile=" + $("#s_mobile_no").val() + "&password=" + $("#s_password").val(),
         success: function(result) {
             
-            if (result  == 1) {
+            if (result == 1) {
                 window.location.assign("http://localhost/blog_project/admin");
             } else {
                 alert(result);
