@@ -14,7 +14,7 @@
             <div class="container">
                 <div class="categories__grid__post">
                     <div class="row">
-                        <div class="col-lg-8 col-md-8">
+                        <div class="col-lg-12 col-md-12">
                             <div class="breadcrumb__text">
                                 <h2>Sub Categories: <span><b> <?php echo ucfirst($filterd_cat); ?> / <?php echo ucfirst($filterd_sub_cat); ?></b></span></h2>
                                 <div class="breadcrumb__option">
@@ -47,7 +47,7 @@
 
                             <div class="categories__list__post__item">
                                 <div class="row inside-hov-img">
-                                    <div class="col-lg-6 col-md-6">
+                                    <div class="col-lg-4 col-md-4">
                                         <a href="?p=blogView&id=<?php echo $posts['id']; ?>">    
                                             <div id="imgHov" style="border-radius: 15px !important; margin: 5px; transform: <?php if($count%2 == 0){echo "rotate(5deg)";} else { echo "rotate(-5deg)";} ?>; border:2px #F4952F solid " class="categories__post__item__pic set-bg "
                                                 data-setbg="admin/post_images/<?php echo $posts['title_img']; ?>">
@@ -58,7 +58,7 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="col-lg-6 col-md-6">
+                                    <div class="col-lg-8 col-md-8">
                                         <div class="categories__post__item__text">
                                             <a href="?p=blogView&id=<?php echo $posts['id']; ?>"> 
                                                 <!-- <span style="font-size: 40px ; " class="post__label">Apple</span> -->
@@ -75,38 +75,7 @@
                                 </div>
                             </div>
                             
-                                <div class="categories__list__post__item">
-                                    <div class="row inside-hov-img">
-                                        <div class="col-lg-6 col-md-6">
-                                            <a href="?p=blogView&id=<?php echo $posts['id']; ?>">
-                                                <div id="imgHov" style="border-radius: 15px !important; margin: 5px; transform: <?php if($count%2 == 0){echo "rotate(5deg)";} else { echo "rotate(-5deg)";} ?>; border:2px #F4952F solid " class="categories__post__item__pic set-bg "
-                                                    data-setbg="admin/post_images/<?php echo $posts['title_img']; ?>">
-                                                    <div class="post__meta">
-                                                        <h4><?php echo $day; ?></h4>
-                                                        <span><?php echo $monthName; ?></span>
-                                                    </div>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        
-                                        <div class="col-lg-6 col-md-6">
-                                            <div class="categories__post__item__text">
-                                                <a href="?p=blogView&id=<?php echo $posts['id']; ?>">
-                                                    <!-- <span style="font-size: 40px ; " class="post__label">Apple</span> -->
-                                                    <h3><a style="padding: 0px !important; margin: 10px 0px 10px 0px;" href="?p=blogView&id=<?php echo $posts['id']; ?>"><?php echo $posts['title']; ?></a></h3>
-                                                    <ul class="post__widget">
-                                                        <li>by <span><?php echo $posts['user_name']; ?></span></li>
-                                                        <li>3 min read</li>
-                                                        <li>20 Comment</li>
-                                                    </ul>
-                                                    <p><?php echo substr($posts['description'], 0, 200); ?> ...</p>
-                                                </a>
-                                            </div>
-
-                                        </div>
-                                        
-                                    </div>
-                                </div>
+                                
                             <?php
                             
                                     }
@@ -128,9 +97,9 @@
                             </div> -->
                             
                         </div>
-                        <div class="col-lg-4 col-md-4">
+                        <!-- <div class="col-lg-4 col-md-4">
                             <div class="sidebar__item">
-                                <!-- <div class="sidebar__about__item">
+                                <div class="sidebar__about__item">
                                     <div class="sidebar__item__title">
                                         <h6>About me</h6>
                                     </div>
@@ -139,7 +108,7 @@
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                                         incididunt ut labore et dolore magna aliqua.</p>
                                     <a href="#" class="primary-btn">Read more</a>
-                                </div> -->
+                                </div>
                                 <div class="sidebar__follow__item">
                                     <div class="sidebar__item__title">
                                         <h6 style="font-size: large;"> <b> Follow Us </b></h6>
@@ -152,7 +121,7 @@
                                         <a href="#"><i class="fa fa-envelope-o"></i></a>
                                     </div>
                                 </div>
-                                <!-- <div class="sidebar__feature__item">
+                                <div class="sidebar__feature__item">
                                     <div class="sidebar__item__title">
                                         <h6 style="font-size: large;"><b>Feature Posts</b> </h6>
                                     </div>
@@ -207,9 +176,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div> -->
-                                <!--   -->
-                                <!-- <div class="sidebar__item__categories">
+                                </div>
+                                <div class="sidebar__item__categories">
                                     <div class="sidebar__item__title">
                                         <h6>Categories</h6>
                                     </div>
@@ -223,10 +191,10 @@
                                         <li><a href="#">Vegan <span>63</span></a></li>
                                         <li><a href="#">Weightloss <span>27</span></a></li>
                                     </ul>
-                                </div> -->
+                                </div>
                                 
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

@@ -65,7 +65,7 @@
         </svg>
         <b style="font-size: 20px; ">22</b>
         <div style="float:right">
-          <button type="button" class="btn btn-info">Edit</button>
+          <button type="button" class="btn btn-info" value="">Edit</button>
           <button type="submit" class="btn btn-danger" name="delete_post" value="<?php echo $posts['id']; ?>">Delete</button>
           <a href="../?p=blogView&id=<?php echo $posts['id']; ?>"><button type="button" class="btn btn-warning">View Post</button></a>
           <button type="button" class="btn btn-light">Share</button>
