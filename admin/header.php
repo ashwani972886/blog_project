@@ -23,6 +23,7 @@
 </head>
 
     <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+    <script src="assets/scripts/new_post.js"></script>
 
 <body>
     
@@ -105,9 +106,8 @@
                 <div class="scrollbar-sidebar">
                     <div class="app-sidebar__inner">
                         <ul class="vertical-nav-menu">
-                            <!-- <li class="app-sidebar__heading">Dashboard</li> -->
                             <li class="app-sidebar__heading">
-                                <a href="?p=dash" class="mm-active">
+                                <a href="?p=dash" >
                                     <i class="metismenu-icon fas fa-chart-line"></i>
                                     Dashboard
                                 </a>
@@ -132,14 +132,14 @@
                                     <i class="metismenu-icon fa fa-fw" aria-hidden="true"></i>
                                     Comments 
                                 </a>
-                                <a href="?p=prof_set">
+                                <!-- <a href="?p=prof_set">
                                     <i class="metismenu-icon fa fa-fw" aria-hidden="true"></i>
                                     My Profile 
                                 </a>
                                 <a href="?p=set">
                                     <i class="metismenu-icon fa fa-fw" aria-hidden="true"></i>
                                     Settings 
-                                </a>
+                                </a> -->
                             </li>
                         </ul>
                     </div>

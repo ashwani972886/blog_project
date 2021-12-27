@@ -103,6 +103,7 @@ function draftpost($session_id, $isPreview){
             echo "<script> window.location.assign('http://localhost/blog_project/admin/?p=new_post&draft=".$draft_id."'); </script>";
         } else {
             post_blog($_GET['draft']);
+            echo "<script> window.location.assign('http://localhost/blog_project/admin/?p=post_li'); </script>";
         }
 
     } 
@@ -115,7 +116,10 @@ function post_blog($draft_id){
     date_default_timezone_set('Asia/Kolkata');
 
     $date = date("Y-m-d H:i:s");
-    $tags = explode(",",$_POST['tagsInput']);
+    if($_POST['tagsInput'] != ""){
+        $tags = explode(",",$_POST['tagsInput']);
+    }
+    
 
     $query = "INSERT INTO `posts` (post_id, user_id, user_name, title_img, title, category, sub_category, description, quote_desc, quote_author, tags, quote_s, profile_s, comment_s)
                 SELECT post_id, user_id, user_name, title_img, title, category, sub_category, description, quote_desc, quote_author, tags, quote_s, profile_s, comment_s
@@ -127,14 +131,15 @@ function post_blog($draft_id){
             $delete_draft = "DELETE FROM `post_draft` WHERE `id` = '".$draft_id."'";
             if(mysqli_query($link, $delete_draft)) {
                 $i = 0;
-    
-                while($i < count($tags)){
-                    $tags_query = "INSERT INTO tags (`tags`)
-                                VALUES ('". mysqli_real_escape_string($link, $tags[$i])."')";
+                if($_POST['tagsInput'] != ""){
+                    while($i < count($tags)){
+                        $tags_query = "INSERT INTO tags (`tags`)
+                                    VALUES ('". mysqli_real_escape_string($link, $tags[$i])."')";
 
-                    mysqli_query($link, $tags_query);
-                    $i = $i+1;
-                } 
+                        mysqli_query($link, $tags_query);
+                        $i = $i+1;
+                    } 
+                }
                 echo "<script> alert('Post Published!'); </script>";
             }
             
@@ -206,5 +211,19 @@ function deleteData($id, $image, $isDraft){
     }
 }
 
+function calculate_order_date($date_time){
+    $a = date('h:i a', strtotime($date_time));
+    $splitDateTime = explode(" ",$date_time);
+    $date = $splitDateTime[0];
+    $splitDate = explode("-",$date);
+
+    $year = $splitDate[0];
+    $month = $splitDate[1];
+    $day = $splitDate[2];
+           
+    $monthName = date('M', mktime(0, 0, 0, $month, 10));
+    
+    return $monthName." ".$day.", ".$a;
+}
 
 ?>

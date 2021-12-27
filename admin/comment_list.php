@@ -14,12 +14,12 @@
         // $num_postId = $posts['post_id'];
         // $num_postId = explode("_","$num_postId");
         // $num_postId = $num_postId[0];
-
+          $time = calculate_order_date($posts['date_time']);
     ?>
     <form method="POST">
       <div style="padding: 10px;" id="show_comment" class="card" name="comment" onclick="displayComment('<?php echo $posts['post_id']; ?>','<?php echo $posts['title']; ?>', '<?php echo $posts['Likes']; ?>', <?php echo $posts['Comments']; ?>);" value="<?php echo $posts['post_id']; ?>">
         <div class="custom_card_header">
-          <h6 style="float:right"> </h6>
+          <h6 style="float:right"><?php echo $time; ?></h6>
           <h6><b><?php echo $posts['post_id']; ?> </b></h6>
           <hr>
         </div>
@@ -49,6 +49,7 @@
               <div class="text-center">
                 <i class="fa fa-hand-point-left" style="font-size: 50px;"></i>
                 <h1>Please Select Any Post First!</h1>
+               
               </div>
             </div>
 

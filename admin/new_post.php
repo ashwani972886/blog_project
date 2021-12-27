@@ -65,26 +65,36 @@
                                 <select name="getCategory" id="getCategory" class="form-control">
                                     <option selected><?php if($draft['category'] != "") { echo $draft['category']; } else { echo "Category"; } ?></option>
 
-                                    <option value="food_recipies">Food Recipes</option>
-                                    <option value="fiction">Fiction</option>
-                                    <option value="relationship">Relationship</option>
-                                    <option value="travel">Travel</option>
-                                    <option value="health_n_beauty">Health & Beauty</option>
-                                    <option value="finance_n_money">Finance & Money</option>
+                                    <?php 
+                                    
+                                        $query_category_list = "SELECT * FROM category ";
+                                        $result_category_list = mysqli_query($link, $query_category_list);
+                                        if(mysqli_num_rows($result_category_list) > 0 ){
+                                            while($Category = mysqli_fetch_assoc($result_category_list)){
+                                    
+                                    ?>
+
+                                            <option value="<?php echo $Category['category']; ?>"><?php echo ucfirst($Category['category']); ?></option>
+                                            
+
+                                    <?php
+                                            }
+                                        }
+                                    
+                                    ?>
 
                                 </select>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="position-relative form-group">
-                                <!-- <label for="title" class=""><h3>Title</h3></label> -->
                                 <select name="getSubCategory" id="getSubCategory" class="form-control">
                                     <option selected><?php if($draft['sub_category'] != "") { echo $draft['sub_category']; } else { echo "Sub-Category"; }?></option>
-                                    <option value="Technology">Technology</option>
+                                    <!-- <option value="Technology">Technology</option>
                                     <option value="Historical Monuments">Historical Monuments</option>
                                     <option value="Health Tips">Health Tips</option>
                                     <option value="Seafood Recipes">Seafood Recipes</option>
-                                    <option value="Lifestyle">Lifestyle</option>
+                                    <option value="Lifestyle">Lifestyle</option> -->
                                 </select>
                             </div>
                         </div>
@@ -98,7 +108,6 @@
                     <div class="form-row">
                         <div class="col-md-12">
                             <div class="position-relative form-group">
-                                <!-- <label for="title" class=""><h3>Title</h3></label> -->
                                 <input name="quote" id="quote" placeholder="Quote Description" class="form-control" value="<?php echo $draft['quote_desc']; ?>">
                             </div>
                         </div>
