@@ -16,13 +16,13 @@
 
         } else {
 
-            $query = "SELECT * FROM `blogger_users` WHERE `email` = '".mysqli_real_escape_string($link, $_POST['email'])."' LIMIT 1";
+            $query_check_email = "SELECT * FROM `blogger_users` WHERE `email` = '".mysqli_real_escape_string($link, $_POST['email'])."' LIMIT 1";
             
-            $result = mysqli_query($link, $query);
+            $result_check_email = mysqli_query($link, $query_check_email);
     
-            $row = mysqli_fetch_assoc($result);
+            $row_check_email = mysqli_fetch_assoc($result_check_email);
 
-            if($row['email'] != $_POST['email']){
+            if(isset($row_check_email['email']) != $_POST['email']){
 
                 $query = "INSERT INTO blogger_users (`first_name`, `last_name`, `email`, `mobile`, `password`)
                     VALUES ('".mysqli_real_escape_string($link, $_POST['first_name'])."',
@@ -43,6 +43,8 @@
                     }
                     
                 }     
+            } else {
+                echo "User already exist";
             }
 
             
