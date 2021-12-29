@@ -2,8 +2,8 @@
 <?php
 
     include("../admin/functions.php");
-    // $link = mysqli_connect("localhost", "root", "", "blog_db");
-    $link = mysqli_connect("156.67.222.106", "u735106373_blog_project", "0204@Anujk", "u735106373_blog_project");
+    $link = mysqli_connect("localhost", "root", "", "blog_db");
+    // $link = mysqli_connect("156.67.222.106", "u735106373_blog_project", "0204@Anujk", "u735106373_blog_project");
 
     $query = "SELECT * FROM post_draft WHERE `id` = '".$_GET['draft']."' ";
 
