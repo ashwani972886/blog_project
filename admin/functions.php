@@ -7,8 +7,8 @@
     $session_id = isset($_SESSION['id']) ? $_SESSION['id'] : '';
 
 
-    // $link = mysqli_connect("localhost", "root", "", "blog_db");
-    $link = mysqli_connect("156.67.222.106", "u735106373_blog_project", "0204@Anujk", "u735106373_blog_project");
+    $link = mysqli_connect("localhost", "root", "", "blog_db");
+    // $link = mysqli_connect("156.67.222.106", "u735106373_blog_project", "0204@Anujk", "u735106373_blog_project");
 
     if (mysqli_connect_errno()) {
         
@@ -40,8 +40,8 @@ if($session_id){
 
 function draftpost($session_id, $isPreview){
     
-    // $link = mysqli_connect("localhost", "root", "", "blog_db");
-    $link = mysqli_connect("156.67.222.106", "u735106373_blog_project", "0204@Anujk", "u735106373_blog_project");
+    $link = mysqli_connect("localhost", "root", "", "blog_db");
+    // $link = mysqli_connect("156.67.222.106", "u735106373_blog_project", "0204@Anujk", "u735106373_blog_project");
     date_default_timezone_set('Asia/Kolkata');
 
     $date = date("Y-m-d H:i:s");
@@ -111,8 +111,8 @@ function draftpost($session_id, $isPreview){
 }
 
 function post_blog($draft_id){
-    // $link = mysqli_connect("localhost", "root", "", "blog_db");
-    $link = mysqli_connect("156.67.222.106", "u735106373_blog_project", "0204@Anujk", "u735106373_blog_project");
+    $link = mysqli_connect("localhost", "root", "", "blog_db");
+    // $link = mysqli_connect("156.67.222.106", "u735106373_blog_project", "0204@Anujk", "u735106373_blog_project");
     date_default_timezone_set('Asia/Kolkata');
 
     $date = date("Y-m-d H:i:s");
@@ -193,7 +193,9 @@ function get_timeago( $time ) {
 }
 
 function deleteData($id, $image, $isDraft){
-    $link = mysqli_connect("156.67.222.106", "u735106373_blog_project", "0204@Anujk", "u735106373_blog_project");
+    $link = mysqli_connect("localhost", "root", "", "blog_db");
+
+    // $link = mysqli_connect("156.67.222.106", "u735106373_blog_project", "0204@Anujk", "u735106373_blog_project");
     date_default_timezone_set('Asia/Kolkata');
 
     if($isDraft == 1){
